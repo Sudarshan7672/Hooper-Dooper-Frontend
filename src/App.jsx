@@ -1,11 +1,12 @@
 import './App.css'
+import BalanceBike from './BalanceBike'
 
 function App() {
   
   return (
     <>
       <div>
-        <p>Main component</p>
+        <BalanceBike/>
       </div>
     </>
   )
