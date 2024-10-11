@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row justify-between py-4 px-8 ">
+    <div className="flex absolute z-10  w-full flex-row justify-between py-4 px-8 ">
       <a href="/" className="logo">
         <img src={HooperDooper_logo} alt="HooperDooper_logo" />
       </a>
