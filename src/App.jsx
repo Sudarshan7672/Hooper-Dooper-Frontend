@@ -8,15 +8,16 @@ import Hero from './Hero'
 function App() {
   return (
     <>
-      <Hero />
+      
       <div>
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<BalanceBike />} />
+            <Route path="/" element={<Hero />} />
             <Route path="/products" element={<BalanceBike />} />
           </Routes>
         </Router>
+        <Hero />
       </div>
     </>
   );
