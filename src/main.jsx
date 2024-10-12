@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import BalanceBike from "./BalanceBike";
 import "./Roboto.css";
 import Footer from "./Footer";
+import Story from "./Story.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/products" element={<BalanceBike />} />
-        <Route path="/our-story" element={<BalanceBike />} />
+        <Route path="/our-story" element={<Story />} />
         <Route path="/cart" element={<BalanceBike />} />
         <Route path="/profile" element={<BalanceBike />} />
       </Routes>
