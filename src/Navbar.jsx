@@ -15,19 +15,27 @@ const Navbar = () => {
 
   return (
     <div className="flex absolute z-10  w-full flex-row justify-between py-4 px-8 ">
-      <a href="/" className="logo">
-        <img src={HooperDooper_logo} alt="HooperDooper_logo" />
-      </a>
-      <div className="flex lg:hidden md:hidden ">
-        <Hamburger toggled={isOpen} toggle={handleClick} />
+      <div className="flex flex-row gap-2">
+        <div className="flex lg:hidden md:hidden ">
+          <Hamburger toggled={isOpen} toggle={handleClick} />
+        </div>
+        <a href="/" className="logo">
+          <img src={HooperDooper_logo} alt="HooperDooper_logo" />
+        </a>
       </div>
       <div
-        className="hidden flex-row items-center justify-center roboto-medium space-x-[3vw] lg:flex md:flex"
+        className=" flex-row items-center justify-center roboto-medium space-x-[3vw] flex flex"
         onClick={closeMenu}
       >
-        <a href="/">Home</a>
-        <Link to="products">Our Products</Link>
-        <Link to="our-story">Our Story</Link>
+        <Link className="hidden lg:flex md:flex" to="">
+          Home
+        </Link>
+        <Link className="hidden lg:flex md:flex" to="products">
+          Our Products
+        </Link>
+        <Link className="hidden lg:flex md:flex" to="our-story">
+          Our Story
+        </Link>
         <div className=" flex gap-6 items-center">
           <Link to="cart">
             <img src={shoppingCart} alt="shopping-cart" />
