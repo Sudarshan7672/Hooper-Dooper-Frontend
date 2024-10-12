@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AddressPage from "./AddressPage";
 export default function Profile() {
     return(
         <section className="relative pt-40 pb-24">
@@ -25,6 +26,7 @@ export default function Profile() {
                 <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">My Orders</a>
                 <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">My Cart</a>
                 <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">Edit profile</a>
+                <AddressPage />
             </div>
         </div>
     </section>

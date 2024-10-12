@@ -1,13 +1,14 @@
 import CycleModel from "./cycleModel";
 import tick from "./assets/tick.png";
 import cyclehome from "./assets/cycle.png";
+import {Link} from 'react-router-dom'
 // import productvideo from './assets/'
 
 export default function HeroMobile() {
   return (
     <>
       <div>
-        <div className="w-[100vw] block model pt-24">
+        <div className="w-[100vw] block model pt-[180px]">
           <p className="text-center flex flex-wrap m-auto flex-col justify-center items-center text-[100px] mt-[-100px] font-bold text-white/50 leading-1 w-full ">
             HOOPER
           </p>
@@ -19,7 +20,7 @@ export default function HeroMobile() {
           </div>
 
           {/* Descriptions1 */}
-          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[135px] left-[-60px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[215px] left-[-60px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
             <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
               <img src={tick} alt="" />
             </div>
@@ -29,7 +30,7 @@ export default function HeroMobile() {
           </div>
 
           {/* Descriptions2 */}
-          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[100px] left-[210px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[190px] left-[210px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
             <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
               <img src={tick} alt="" />
             </div>
@@ -39,7 +40,7 @@ export default function HeroMobile() {
           </div>
 
           {/* Descriptions3 */}
-          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[210px] left-[130px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[280px] left-[130px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
             <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
               <img src={tick} alt="" />
             </div>
@@ -48,7 +49,7 @@ export default function HeroMobile() {
             </div>
           </div>
           {/* Descriptions4 */}
-          <div className=" absolute h-8 px-2.5 py-1.5 scale-50 top-[270px] left-[30px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+          <div className=" absolute h-8 px-2.5 py-1.5 scale-50 top-[350px] left-[30px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
             <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
               <img src={tick} alt="" />
             </div>
@@ -73,11 +74,13 @@ export default function HeroMobile() {
               Marvelous yet simple toys which will bring delightful experience
               to the little one
             </div>
+            <Link to="/FAQ">
             <div className="px-10 py-2.5 h-[30px] w-[40px] mt-[10px] bg-gray-300 rounded-[50px] border border-black backdrop-blur-[10px] justify-center items-center gap-2.5 inline-flex m-[auto]">
               <div className="text-black text-lg font-semibold font-['Plus Jakarta Sans'] leading-[27px] tracking-wide">
                 FAQ
               </div>
             </div>
+            </Link>
           </div>
         </div>
       </div>

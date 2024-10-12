@@ -23,7 +23,7 @@ export default function SignupPage() {
     return (
         <>
             {/* main div */}
-            <div className="w-full sm:w-[70vw] m-auto flex flex-col lg:flex-row justify-center">
+            <div className="w-full sm:w-[70vw] m-auto pt-[80px] pb-[50px] md:pt-[150px] md:pb-[50px] lg:pt-[200px] lg:pb-[180px] flex flex-col lg:flex-row justify-center">
                 {/* first half div  */}
                 <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
                     <div className="w-full mt-[20px] flex justify-center">

@@ -1,6 +1,7 @@
 import CycleModel from "./cycleModel";
 import tick from "./assets/tick.png";
 import cyclehome from "./assets/cycle.png";
+import {Link} from 'react-router-dom'
 // import productvideo from './assets/'
 
 export default function HeroMedium() {
@@ -73,11 +74,13 @@ export default function HeroMedium() {
               Marvelous yet simple toys which will bring delightful experience
               to the little one
             </div>
+            <Link to="FAQ">
             <div className="px-10 py-2.5 h-[30px] w-[40px] mt-[10px] bg-gray-300 rounded-[50px] border border-black backdrop-blur-[10px] justify-center items-center gap-2.5 inline-flex m-[auto]">
               <div className="text-black text-lg font-semibold font-['Plus Jakarta Sans'] leading-[27px] tracking-wide">
                 FAQ
               </div> 
             </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default function FAQ() {
     return (
-      <section className="bg-[#1D1D1D] text-gray-100 py-32 min-h-screen">
+      <section className="bg-[#ffffff] text-black-100 py-32 min-h-screen">
         <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
           <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">
             Frequently Asked Questions

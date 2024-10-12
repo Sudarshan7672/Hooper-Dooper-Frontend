@@ -1,5 +1,6 @@
 import CycleModel from "./cycleModel";
 import tick from './assets/tick.png'
+import {Link} from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -72,11 +73,13 @@ export default function Hero() {
             Marvelous yet simple toys which will bring delightful experience to
             the little one
           </div>
+          <Link to="/FAQ">
           <div className="px-10 py-2.5 bg-white/20 rounded-[50px] border border-white backdrop-blur-[10px] justify-center items-center gap-2.5 inline-flex lg:ml-[600px]">
             <div className="text-white text-lg font-semibold font-['Plus Jakarta Sans'] leading-[27px] tracking-wide">
               FAQ
             </div>
           </div>
+          </Link>
         </div>
       </div>
     </div>

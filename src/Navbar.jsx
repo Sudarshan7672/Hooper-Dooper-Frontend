@@ -4,6 +4,7 @@ import Hamburger from "hamburger-react";
 import shoppingCart from "./assets/shopping-cart.svg";
 import profileIcon from "./assets/profileIcon.svg";
 import { Link } from "react-router-dom";
+import LoginPagePopup from "./components/LoginPagePopup"; 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const handleClick = () => {
@@ -41,6 +42,7 @@ const Navbar = () => {
             <img src={shoppingCart} alt="shopping-cart" />
           </Link>
           <div className="divider bg-zinc-800 h-10 w-[1.5px]"></div>
+          <LoginPagePopup />
           <Link to="profile">
             <img src={profileIcon} alt="profile-icon" />
           </Link>
