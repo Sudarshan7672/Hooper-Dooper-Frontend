@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Story from "./Story.jsx";
 import LoginPage from "./components/LoginPage.jsx";
 import SignupPage from "./components/SignupPage.jsx";
+import Profile from "./components/Profile.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -24,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/products" element={<BalanceBike />} />
         <Route path="/our-story" element={<Story />} />
         <Route path="/cart" element={<BalanceBike />} />
-        <Route path="/profile" element={<BalanceBike />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </Router>
