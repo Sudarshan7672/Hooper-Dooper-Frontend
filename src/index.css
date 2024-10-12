@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper {
+  width: 50vw;
+  height: 400px; /* Adjust the height as needed */
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the slide */
+}
+
+.card {
+  background-color: white; /* Card background color */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Centering */
+  align-items: center; /* Centering */
+  padding: 10px; /* Padding around the image */
+}
+
+.card img {
+  width: 300px; /* Make the image fill the card */
+  height: 350px; /* Maintain aspect ratio */
+  border-radius: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(186, 106, 106); /* Color of navigation buttons */
+  z-index: 10; /* Ensure buttons are above slides */
+}
+
+.swiper-pagination {
+  bottom: 10px; /* Adjust pagination position */
+}

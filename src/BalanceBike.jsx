@@ -2,8 +2,8 @@ import React from "react";
 import ReactPlayer from "react-player";
 const BalanceBike = () => {
   return (
-    <div>
-      <div className="lg:mt-24 lg:mb-28 w-[70vw] h-[20vh] bg-[#464FFF] m-auto rounded-lg hidden items-center justify-around">
+    <div className="lg:pt-24">
+      <div className=" lg:mb-28  w-[70vw] h-[20vh] bg-[#464FFF] m-auto rounded-lg hidden items-center justify-around">
         <div className="flex flex-col lg:gap-4">
           <h1 className="text-white font-bold lg:text-4xl">200+</h1>
           <p className="text-white text-center">Deals</p>
