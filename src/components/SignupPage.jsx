@@ -1,8 +1,25 @@
 import googleicon from '../assets/googleicon.png';
 import HooperDooper_logo from "../assets/HooperDooper_logo.png";
 import cycle from "../assets/cycle.png";
-
+import axios from "axios";
+import {useState} from "react";
 export default function SignupPage() {
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post("http://localhost:5000/auth/v1/register", {
+            fullName,
+            email,
+            password: password
+        }).then((res) => {
+            console.log(res.data);
+            window.location.href = "/login";
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
     return (
         <>
             {/* main div */}
@@ -22,21 +39,27 @@ export default function SignupPage() {
                 {/* second half div  */}
                 <div className="w-full lg:w-[40%] m-auto">
                     <div>
-                        <form action="">
+                        <form action="" onSubmit={handleSubmit}>
                             <div className="w-full flex justify-center items-center">
                                 <p className="text-2xl font-bold">Sign Up</p>
                             </div>
                             <div className="mt-[20px]">
                                 <p>Name</p>
-                                <input type="text" required className="w-full rounded-md border-2 h-[35px]" placeholder="Enter Your Name" />
+                                <input type="text" required value={fullName} onChange={(e)=>{
+                                    setFullName(e.target.value);
+                                }} className="w-full rounded-md border-2 h-[35px]" placeholder="Enter Your Name" />
                             </div>
                             <div className="mt-[20px]">
                                 <p>Email Address</p>
-                                <input type="email" required className="w-full rounded-md border-2 h-[35px]" placeholder="Enter Your Email" />
+                                <input type="email" required value={email} onChange={(e)=>{
+                                    setEmail(e.target.value);
+                                }} className="w-full rounded-md border-2 h-[35px]" placeholder="Enter Your Email" />
                             </div>
                             <div>
                                 <p>Password</p>
-                                <input type="password" required className="w-full rounded-md border-2 h-[35px]" placeholder="Set Your Password" />
+                                <input type="password" required value={password} onChange={(e)=>{
+                                    setPassword(e.target.value);
+                                }} className="w-full rounded-md border-2 h-[35px]" placeholder="Set Your Password" />
                             </div>
                             <div className="w-full mt-[20px] flex justify-center">
                                 <button type="submit">

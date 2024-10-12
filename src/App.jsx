@@ -6,10 +6,7 @@ import OurProductHomepage from "./components/ourProductHomepage";
 import OurStoryHomePage from "./components/ourStoryHomePage";
 import Testimonialsall from "./components/Testimonialsall";
 import ProductGallery from "./components/ProductGallery";
-import LoginPage from "./components/LoginPage";
-import SignupPage from "./components/SignupPage"; 
 import FAQ from "./components/FAQ";
-
 function App() {
   return (
     <>
@@ -33,12 +30,6 @@ function App() {
       </div>
       <div>
       <ProductGallery />
-      </div>
-      <div>
-      <LoginPage />
-      </div>
-      <div>
-      <SignupPage />
       </div>
       <div>
       <FAQ />
