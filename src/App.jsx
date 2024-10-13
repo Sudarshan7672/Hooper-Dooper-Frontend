@@ -3,9 +3,9 @@ import Hero from "./Hero";
 import HeroMobile from "./HeroMobile";
 import HeroMedium from "./HeroMedium";
 import OurProductHomepage from "./components/OurProductHomepage.jsx";
-import OurStoryHomePage from "./components/ourStoryHomePage";
-import Testimonialsall from "./components/Testimonialsall";
-import ProductGallery from "./components/ProductGallery";
+import OurStoryHomePage from "./components/OurStoryHomePage.jsx";
+import Testimonialsall from "./components/Testimonialsall.jsx";
+import ProductGallery from "./components/ProductGallery.jsx";
 import FAQ from "./components/FAQ";
 import { useEffect } from "react";
 
