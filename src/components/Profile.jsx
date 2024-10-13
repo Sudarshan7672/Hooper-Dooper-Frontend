@@ -15,7 +15,7 @@ export default function Profile() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://88.222.214.14:5000/profile", {
+      .get("http://localhost:5000/profile", {
         withCredentials: true,
         credentials: "include",
         headers: {

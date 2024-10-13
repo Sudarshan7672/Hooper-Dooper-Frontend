@@ -11,7 +11,7 @@ export default function SignupPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://88.222.214.14:5000/auth/v1/register", {
+      .post("http://localhost:5000/auth/v1/register", {
         fullName,
         email,
         password: password,
