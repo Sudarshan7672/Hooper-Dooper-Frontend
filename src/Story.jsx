@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import storyImage1 from "./assets/story-image-1.png";
 import storyImage2 from "./assets/story-image-2.png";
 import storyImage3 from "./assets/story-image-3.png";
 import storyImage4 from "./assets/story-image-4.png";
 import { Link } from "react-router-dom";
 const Story = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="pt-40 ">
       <div className="w-[80vw]  plus-jakarta-sans m-auto flex ">

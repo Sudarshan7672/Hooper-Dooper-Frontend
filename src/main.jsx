@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Profile from "./components/Profile.jsx";
 import AddressPage from "./components/AddressPage.jsx";
 import FAQ from "./components/FAQ.jsx";
-
+import AuthGoogle from "./AuthGoogle.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -44,6 +44,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/auth/google/success" element={<AuthGoogle />} />
       </Routes>
       <Footer />
     </Router>

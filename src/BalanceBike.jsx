@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactPlayer from "react-player";
 const BalanceBike = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="pt-40 pb-20">
       <div className=" lg:mb-28  w-[70vw] h-[20vh] bg-[#464FFF] m-auto rounded-lg hidden items-center justify-around">
