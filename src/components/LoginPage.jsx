@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const googleAuthHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/auth/google", {
+      const res = await axios.get("http://88.222.214.14:5000/auth/google", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -28,7 +28,7 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/auth/v1/login", {
+      const res = await axios.post("http://88.222.214.14:5000/auth/v1/login", {
         email,
         password,
       });
