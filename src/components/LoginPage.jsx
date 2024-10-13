@@ -25,7 +25,7 @@ export default function LoginPage() {
   return (
     <>
       {/* main div */}
-      <div className="w-full sm:w-[70vw] m-auto flex flex-col lg:flex-row justify-center">
+      <div className="w-full sm:w-[70vw] m-auto pt-[120px] mb-[150px] lg:pt-[150px] lg:pb-[210px] flex flex-col lg:flex-row justify-center">
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
