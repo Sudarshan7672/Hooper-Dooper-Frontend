@@ -1,5 +1,5 @@
 import googleicon from "../assets/googleicon.png";
-import HooperDooper_logo from "../assets/HooperDooper_logo.png";
+import HooperDooper_logo from "../assets/HooperDooper_Logo.png";
 import cycle from "../assets/cycle.png";
 import axios from "axios";
 import { useState } from "react";
