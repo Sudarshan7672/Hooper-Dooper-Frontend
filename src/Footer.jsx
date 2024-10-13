@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./assets/HooperDooper_logo.png";
+import logo from "./assets/HooperDooper_Logo.png";
 import callICon from "./assets/call-icon.svg";
 import mailIcon from "./assets/mail-icon.svg";
 import amazonPay from "./assets/AmazonPay.png";
