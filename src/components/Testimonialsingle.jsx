@@ -21,23 +21,20 @@ export default function Testimonialsingle() {
     <Slider {...settings}>
       {Testimonialsarray.map((testimonial, index) => (
         <div key={index} className="w-full sm:w-[90vw] m-auto flex justify-center items-center">
-        <div className="w-full sm:w-[90vw] m-auto mt-[100px] flex justify-center items-center">
+        <div className="w-full sm:w-[90vw] m-auto mt-[30px] md:mt-[70px] lg:mt-[100px] flex justify-center items-center">
           {/* <div className="w-full sm:w-[20%] flex justify-center">
               <i className="fa-solid fa-arrow-left text-3xl"></i>
           </div> */}
           <div className="w-full sm:w-[60%] flex justify-center">
-            <div className="w-full sm:w-[100%] rounded-lg flex-col flex-wrap justify-center bg-white items-center h-[200px]">
-              <p className="w-[90%] sm:w-[80%] block ml-auto mr-auto mt-[20px]">
-                <img src={quotesign} className="block w-[30px] sm:w-[40px] text-center h-[30px]" alt="" />
+            <div className="w-full sm:w-[100%] rounded-lg flex-col flex-wrap justify-center bg-white items-center ">
+              <p className="w-[90%] pb-4 sm:w-[80%] block ml-auto mr-auto lg:mt-[20px]">
+                <img src={quotesign} className="block w-[30px] sm:w-[40px] text-center lg:h-[30px]" alt="" />
                 {testimonial.review}”
               </p>
             </div>
           </div>
-          {/* <div className="w-full sm:w-[20%] flex justify-center">
-              <i className="fa-solid fa-arrow-right text-3xl"></i>
-          </div> */}
         </div>
-        <div className="w-full flex justify-center mt-[20px] font-bold">
+        <div className="w-full flex justify-center mt-[20px] mb-[20px] font-bold">
           <p>{testimonial.name}</p>
         </div>
       </div>

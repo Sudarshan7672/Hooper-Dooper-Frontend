@@ -30,7 +30,7 @@ export default function HeroMobile() {
           </div>
 
           {/* Descriptions2 */}
-          <div className="h-8 px-2.5 py-1.5 scale-50 absolute top-[190px] left-[210px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+          <div className="h-8 w-[260px] px-2.5 py-1.5 scale-50 absolute top-[190px] left-[210px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
             <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
               <img src={tick} alt="" />
             </div>

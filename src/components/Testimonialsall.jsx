@@ -4,8 +4,8 @@ import Testimonialsingle from './Testimonialsingle';
 export default function Testimonials() {
     return (
         <>
-            <div className="w-full m-auto lg:mt-[50px] bg-cyan-100 lg:h-[600px] h-auto">
-                <div className="w-full lg:w-[80vw] m-auto">
+            <div className="w-full m-auto mt-[30px] lg:mt-[50px] bg-cyan-100 lg:h-[600px] h-auto">
+                <div className="w-full ml-[10px] lg:w-[80vw] m-auto">
                     <div className="Ourproduct flex justify-start pt-10">
                         <img
                             src={yellowlinehorizontal}
