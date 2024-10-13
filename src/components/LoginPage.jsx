@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const googleAuthHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/auth/google", {
+      const res = await axios.get("http://88.222.214.14:5000/auth/google", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -28,23 +28,22 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/auth/v1/login", {
+      const res = await axios.post("http://88.222.214.14:5000/auth/v1/login", {
         email,
         password,
       });
       console.log(res.data);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
+        setLoading(false);
         toast.success("Login successful.");
-        setTimeout(() => {
-          window.location.href = "/";
-          setLoading(false);
-        }, 3000);
+        window.location.href = "/";
       }
     } catch (err) {
       console.error(err);
-      toast.error("Login failed. Please check your credentials.");
-    } finally {
+        toast.error(err.response.data.message);
+        setLoading(false);
+
     }
   };
 
