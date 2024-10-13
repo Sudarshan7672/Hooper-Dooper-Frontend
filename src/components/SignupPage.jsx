@@ -1,31 +1,53 @@
 import googleicon from "../assets/googleicon.png";
-import HooperDooper_logo from "../assets/HooperDooper_logo.png";
+import HooperDooper_logo from "../assets/HooperDooper_Logo.png";
 import cycle from "../assets/cycle.png";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 export default function SignupPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
-      .post("http://localhost:5000/auth/v1/register", {
+      .post("http://88.222.214.14:5000/auth/v1/register", {
         fullName,
         email,
         password: password,
       })
       .then((res) => {
         console.log(res.data);
-        window.location.href = "/login";
+        setLoading(false);
+        toast.success(
+          "Signup successful. redirecting to login page. in 3 seconds"
+        );
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 3000);
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
+        toast.error("Signup failed. Please try again.");
       });
   };
   return (
     <>
+      {isLoading && (
+        <div className="absolute w-screen h-screen bg-white/40">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="flex-col gap-4 w-full flex items-center justify-center">
+              <div class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+                <div class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* main div */}
       <div className="w-full sm:w-[70vw] m-auto py-20 px-8 flex flex-col lg:flex-row justify-center">
         {/* first half div  */}
