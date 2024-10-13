@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HooperDooper_logo from "./assets/HooperDooper_logo.png";
 import Hamburger from "hamburger-react";
 import shoppingCart from "./assets/shopping-cart.svg";
 import profileIcon from "./assets/profileIcon.svg";
 import { Link } from "react-router-dom";
-import LoginPagePopup from "./components/LoginPagePopup"; 
+import LoginPagePopup from "./components/LoginPagePopup";
+
 const Navbar = () => {
+  useEffect(() => {
+    setIsLoading(true);
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedin(true);
+    }
+    setIsLoading(false);
+  }, []);
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setOpen] = useState(false);
+  const [isLoggedin, setIsLoggedin] = useState(false);
   const handleClick = () => {
     setOpen(!isOpen);
   };
@@ -25,7 +36,7 @@ const Navbar = () => {
         </a>
       </div>
       <div
-        className=" flex-row items-center justify-center roboto-medium space-x-[3vw] flex flex"
+        className=" flex-row items-center justify-center roboto-medium space-x-[3vw] flex"
         onClick={closeMenu}
       >
         <Link className="hidden lg:flex md:flex" to="">
@@ -42,10 +53,18 @@ const Navbar = () => {
             <img src={shoppingCart} alt="shopping-cart" />
           </Link>
           <div className="divider bg-zinc-800 h-10 w-[1.5px]"></div>
-          <LoginPagePopup />
-          <Link to="profile">
-            <img src={profileIcon} alt="profile-icon" />
-          </Link>
+          {isLoggedin ? (
+            <Link to="profile">
+              <img src={profileIcon} alt="profile-icon" />
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="py-1 px-4 bg-zinc-950 text-zinc-50 poppins-semibold rounded-md"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

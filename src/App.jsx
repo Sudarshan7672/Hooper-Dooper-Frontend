@@ -8,7 +8,12 @@ import Testimonialsall from "./components/Testimonialsall";
 import ProductGallery from "./components/ProductGallery";
 import FAQ from "./components/FAQ";
 import AddressPage from "./components/AddressPage";
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="lg:hidden md:hidden">
@@ -24,23 +29,20 @@ function App() {
         <OurProductHomepage />
       </div>
       <div className="block">
-      <OurStoryHomePage />
+        <OurStoryHomePage />
       </div>
       <div>
-      <Testimonialsall />
+        <Testimonialsall />
       </div>
       <div>
-      <ProductGallery />
+        <ProductGallery />
       </div>
       <div>
-      <FAQ />
-      {/* <AddressPage /> */}
+        <FAQ />
+        {/* <AddressPage /> */}
       </div>
-
-
 
       {/* Trail Code */}
-      
     </>
   );
 }

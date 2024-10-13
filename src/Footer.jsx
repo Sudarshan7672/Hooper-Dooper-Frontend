@@ -40,8 +40,8 @@ const Footer = () => {
             <Link to="">Home</Link>
             <Link to="products">Our Products</Link>
             <Link to="our-story">Our Story</Link>
-            <Link to="testimonials">Testimonials</Link>
-            <Link to="">FAQ</Link>
+            <Link to="/">Testimonials</Link>
+            <Link to="/FAQ">FAQ</Link>
           </div>
         </div>
         <div className="">
