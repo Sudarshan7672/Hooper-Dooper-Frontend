@@ -7,7 +7,6 @@ import OurStoryHomePage from "./components/ourStoryHomePage";
 import Testimonialsall from "./components/Testimonialsall";
 import ProductGallery from "./components/ProductGallery";
 import FAQ from "./components/FAQ";
-import AddressPage from "./components/AddressPage";
 import { useEffect } from "react";
 
 function App() {
