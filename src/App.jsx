@@ -2,7 +2,7 @@ import "./App.css";
 import Hero from "./Hero";
 import HeroMobile from "./HeroMobile";
 import HeroMedium from "./HeroMedium";
-import OurProductHomepage from "./components/ourProductHomepage";
+import OurProductHomepage from "./components/OurProductHomepage.jsx";
 import OurStoryHomePage from "./components/ourStoryHomePage";
 import Testimonialsall from "./components/Testimonialsall";
 import ProductGallery from "./components/ProductGallery";
