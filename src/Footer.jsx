@@ -5,10 +5,10 @@ import callICon from "./assets/call-icon.svg";
 import mailIcon from "./assets/mail-icon.svg";
 import amazonPay from "./assets/AmazonPay.png";
 import googlePay from "./assets/GooglePay.png";
-import masterCard from "./assets/MasterCard.png";
+import masterCard from "./assets/Mastercard.png";
 import visa from "./assets/Visa.png";
 import paytm from "./assets/Paytm.png";
-import paypal from "./assets/Paypal.png";
+import paypal from "./assets/PayPal.png";
 import applePay from "./assets/ApplePay.png";
 import Bhim from "./assets/Bhim.png";
 
