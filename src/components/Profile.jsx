@@ -3,6 +3,7 @@ import AddressPage from "./AddressPage";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { enablePageScroll, disablePageScroll } from "scroll-lock";
 
 export default function Profile() {
   const [result, setResult] = useState([]);
@@ -14,8 +15,9 @@ export default function Profile() {
   };
   useEffect(() => {
     setIsLoading(true);
+    disablePageScroll();
     axios
-      .get("http://88.222.214.14:5000/profile", {
+      .get("https://api.hooperdooper.in/profile", {
         withCredentials: true,
         credentials: "include",
         headers: {
@@ -28,6 +30,7 @@ export default function Profile() {
 
         console.log(response.data);
         setIsLoading(false);
+        enablePageScroll();
       })
       .catch((error) => {
         if (error.response.status === 401) {
@@ -35,7 +38,7 @@ export default function Profile() {
         }
         setIsLoading(false);
         error.response.data.message && setError(error.response.data.message);
-
+        enablePageScroll();
         // console.log(error);
       });
   }, []);
@@ -48,7 +51,7 @@ export default function Profile() {
   return (
     <>
       {isLoading && (
-        <div className="absolute w-screen h-screen bg-white/60 z-20">
+        <div className="absolute w-full h-full bg-white/60 z-20">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="flex-col gap-4 w-full flex items-center justify-center">
               <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
@@ -76,6 +79,21 @@ export default function Profile() {
             <div className="block">
               <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">
                 {result?.data?.fullName}
+                {result?.data?.isVerified ? (
+                  <span
+                    title="Verified Email"
+                    className="text-green-500 text-xl"
+                  >
+                    ✔
+                  </span>
+                ) : (
+                  <span
+                    title="Not Verified Email"
+                    className="text-red-500 text-xl"
+                  >
+                    ❌
+                  </span>
+                )}
               </h3>
               <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">
                 Engineer at BB Agency Industry{" "}

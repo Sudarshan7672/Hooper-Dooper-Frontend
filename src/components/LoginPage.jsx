@@ -2,26 +2,44 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import googleicon from "../assets/googleicon.webp";
-// import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
 import cycle from "../assets/cycle.webp";
 import { Link } from "react-router-dom";
-import HooperDooperLogo from "../assets/HooperDooperLogo.svg"
+import HooperDooperLogo from "../assets/HooperDooperLogo.svg";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 export default function LoginPage() {
-  const [username, setUsername] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    disablePageScroll();
     axios
-      .post("http://localhost:5000/login", {
-        username,
-        password: password,
-      })
+      .post(
+        "https://api.hooperdooper.in/auth/v1/login",
+        {
+          email: email,
+          password: password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log(res.data);
+        localStorage.setItem("token", res.data.token);
+
         window.location.href = "/";
+        setIsLoading(false);
+        enablePageScroll();
       })
       .catch((err) => {
+        toast.error(res.data.message);
         console.log(err);
+        setIsLoading(false);
+        enablePageScroll();
       });
   };
 
@@ -31,12 +49,29 @@ export default function LoginPage() {
 
   return (
     <>
+      {isLoading && (
+        <div className="loader absolute z-30 bg-black/40 w-full h-full">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%]">
+            <div class="flex-col gap-4 w-full flex items-center justify-center">
+              <div class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+                <div class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* main div */}
       <div className="w-full sm:w-[70vw] m-auto pt-[120px] mb-[150px] lg:pt-[150px] flex flex-col lg:flex-row justify-center">
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-            <img src={HooperDooperLogo} width="100px" height="100px" loading="lazy" alt="HooperDooper Logo" />
+            <img
+              src={HooperDooperLogo}
+              width="100px"
+              height="100px"
+              loading="lazy"
+              alt="HooperDooper Logo"
+            />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>
@@ -51,7 +86,7 @@ export default function LoginPage() {
           </div>
         </div>
         {/* second half div  */}
-        <div className="w-full poppins-medium lg:w-[40%] m-auto">
+        <div className="w-full px-6 poppins-medium lg:w-[40%] m-auto">
           <div>
             <form action="" onSubmit={handleSubmit}>
               <div className="w-full flex justify-center items-center">
@@ -61,9 +96,9 @@ export default function LoginPage() {
                 <p>Email Address</p>
                 <input
                   type="text"
-                  value={username}
+                  value={email}
                   onChange={(e) => {
-                    setUsername(e.target.value);
+                    setEmail(e.target.value);
                   }}
                   required
                   className="w-full p-2 my-3 rounded-md border-2 mt-1"
@@ -91,26 +126,26 @@ export default function LoginPage() {
                 </button>
               </div>
               <Link to="/forgotpassword">
-              <div className="flex justify-center mt-[5px]">
-                <p className="text-sm">Forgot Password?</p>
-              </div>
+                <div className="flex justify-center mt-[5px]">
+                  <p className="text-sm">Forgot Password?</p>
+                </div>
               </Link>
               <div className="w-full flex justify-center text-xl mt-[5px]">
                 <p>OR</p>
               </div>
               <Link to="/continuewithgoogle">
-              <div className="flex h-[48px]  mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
-              <div className="p-1 bg-white rounded-xl">
-                  <img
-                    src={googleicon}
-                    className="h-[22px] w-[22px]"
-                    alt="Google Icon"
-                  />
+                <div className="flex h-[48px]  mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
+                  <div className="p-1 bg-white rounded-xl">
+                    <img
+                      src={googleicon}
+                      className="h-[22px] w-[22px]"
+                      alt="Google Icon"
+                    />
+                  </div>
+                  <p className="text-white ml-[10px] font-sans">
+                    Continue With Google
+                  </p>
                 </div>
-                <p className="text-white ml-[10px] font-sans">
-                  Continue With Google
-                </p>
-              </div>
               </Link>
             </form>
             <div className="flex-col justify-center items-center mt-[10px] w-full">
@@ -120,11 +155,11 @@ export default function LoginPage() {
                 </p>
               </div>
               <Link to="/signup">
-              <div className="w-full flex justify-center ">
-                <div className="h-[40px] w-[100px] border-2 border-red-500 rounded-2xl flex mt-[10px] justify-center text-center items-center">
-                  <p>Sign up</p>
+                <div className="w-full flex justify-center ">
+                  <div className="h-[40px] w-[100px] border-2 border-red-500 rounded-2xl flex mt-[10px] justify-center text-center items-center">
+                    <p>Sign up</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
           </div>

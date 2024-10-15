@@ -15,11 +15,20 @@ export default function SignupPage() {
     e.preventDefault();
     setLoading(true);
     axios
-      .post("http://88.222.214.14:5000/auth/v1/register", {
-        fullName,
-        email,
-        password: password,
-      })
+      .post(
+        "https://api.hooperdooper.in/auth/v1/register",
+        {
+          fullName,
+          email,
+          password: password,
+        },
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log(res.data);
         setLoading(false);
@@ -33,7 +42,7 @@ export default function SignupPage() {
       .catch((err) => {
         console.log(err);
         setLoading(false);
-        toast.error("Signup failed. Please try again.");
+        toast.error(err);
       });
   };
   useEffect(() => {
@@ -42,7 +51,7 @@ export default function SignupPage() {
   return (
     <>
       {isLoading && (
-        <div className="absolute w-screen h-screen bg-white/40">
+        <div className="absolute w-screen h-screen bg-black/40">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="flex-col gap-4 w-full flex items-center justify-center">
               <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
@@ -57,7 +66,13 @@ export default function SignupPage() {
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-          <img src={HooperDooperLogo} width="100px" height="100px" loading="lazy" alt="HooperDooper Logo" />
+            <img
+              src={HooperDooperLogo}
+              width="100px"
+              height="100px"
+              loading="lazy"
+              alt="HooperDooper Logo"
+            />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>
@@ -128,18 +143,18 @@ export default function SignupPage() {
                 <p>OR</p>
               </div>
               <Link to="/continuewithgoogle">
-              <div className="flex h-[48px] mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
-                <div className="p-1 bg-white rounded-xl">
-                  <img
-                    src={googleicon}
-                    className="h-[22px] w-[22px]"
-                    alt="Google Icon"
-                  />
+                <div className="flex h-[48px] mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
+                  <div className="p-1 bg-white rounded-xl">
+                    <img
+                      src={googleicon}
+                      className="h-[22px] w-[22px]"
+                      alt="Google Icon"
+                    />
+                  </div>
+                  <p className="text-white ml-[10px] font-sans">
+                    Continue With Google
+                  </p>
                 </div>
-                <p className="text-white ml-[10px] font-sans">
-                  Continue With Google
-                </p>
-              </div>
               </Link>
             </form>
             <div className="flex-col justify-center items-center mt-5 w-full">
