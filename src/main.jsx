@@ -18,6 +18,7 @@ import AddressPage from "./components/AddressPage.jsx";
 import FAQ from "./components/FAQ.jsx";
 import AuthGoogle from "./AuthGoogle.jsx";
 import Cart from "./components/Cart.jsx";
+import OurVideo from "./components/OurVideo.jsx"
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -45,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/ourvideo" element={<OurVideo />} />
         <Route path="/auth/google/success" element={<AuthGoogle />} />
       </Routes>
       <Footer />

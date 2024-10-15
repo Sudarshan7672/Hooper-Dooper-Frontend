@@ -63,9 +63,11 @@ export default function Hero() {
           <div className="lg:-rotate-90 lg:opacity-80 text-white text-[17px] lg:font-extrabold lg:font-['Plus Jakarta Sans'] lg:leading-none lg:tracking-wide  inline-block lg:w-[20%]">
             <p className="mt-[10px]">Watch our video</p>
           </div>
+          <Link to="/ourvideo">
           <div className="lg:w-[100px] lg:h-[150px] lg:mb-[-70px] lg:rounded-xl lg:ml-[-50px] overflow-hidden inline-block">
             <video src="/HeroVideo.mp4" loading="lazy" autoPlay muted loop></video>
           </div>
+          </Link>
         </div>
 
         <div className="flex-row justify-end items-end lg:w-[50%] lg:h-[100px]">
