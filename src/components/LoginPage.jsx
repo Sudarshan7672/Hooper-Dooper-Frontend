@@ -31,14 +31,14 @@ export default function LoginPage() {
       )
       .then((res) => {
         console.log(res.data);
-        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("token", res?.data?.token);
 
         window.location.href = "/";
         setIsLoading(false);
         enablePageScroll();
       })
       .catch((err) => {
-        toast.error(res.data.message);
+        toast.error(err?.response?.data?.message?);
         console.log(err);
         setIsLoading(false);
         enablePageScroll();
