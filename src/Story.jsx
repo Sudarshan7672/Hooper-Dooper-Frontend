@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import storyImage1 from "./assets/story-image-1.png";
-import storyImage2 from "./assets/story-image-2.png";
-import storyImage3 from "./assets/story-image-3.png";
-import storyImage4 from "./assets/story-image-4.png";
+import storyImage1 from "./assets/story-image-1.webp";
+import storyImage2 from "./assets/story-image-2.webp";
+import storyImage3 from "./assets/story-image-3.webp";
+import storyImage4 from "./assets/story-image-4.webp";
 import { Link } from "react-router-dom";
 const Story = () => {
   useEffect(() => {
@@ -90,10 +90,10 @@ const Story = () => {
           autoPlay
         ></video>
         <Link
-          to="../products"
+          to=""
           className="flex text-zinc-950 absolute bottom-[12vh] md:bottom-[8vh] lg:bottom-[4vh]  py-2 px-5 rounded-3xl border-white border-2 font-semibold capitalize text-xl left-[50%] -translate-x-[50%] flex-col justify-center bg-white/60 items-center"
         >
-          buy now
+          Add to Cart
         </Link>
       </div>
     </div>

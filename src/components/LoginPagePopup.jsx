@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import googleicon from "../assets/googleicon.png";
-import cycle from "../assets/cycle.png";
+import googleicon from "../assets/googleicon.webp";
+import cycle from "../assets/cycle.webp";
 import Modal from "./Modal"; // Adjust the path as needed
 import { Link } from "react-router-dom";
 

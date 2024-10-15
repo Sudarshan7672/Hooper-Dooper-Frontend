@@ -6,7 +6,6 @@ import OurProductHomepage from "./components/OurProductHomepage.jsx";
 import OurStoryHomePage from "./components/OurStoryHomePage.jsx";
 import Testimonialsall from "./components/Testimonialsall.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
-import FAQ from "./components/FAQ";
 import { useEffect } from "react";
 
 function App() {
@@ -36,12 +35,6 @@ function App() {
       <div>
         <ProductGallery />
       </div>
-      <div>
-        <FAQ />
-        {/* <AddressPage /> */}
-      </div>
-
-      {/* Trail Code */}
     </>
   );
 }

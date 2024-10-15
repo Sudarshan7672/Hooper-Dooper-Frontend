@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HooperDooper_logo from "./assets/HooperDooper_Logo.png";
+import HooperDooper_logo from "./assets/HooperDooper_Logo.webp";
 import Hamburger from "hamburger-react";
 import shoppingCart from "./assets/shopping-cart.svg";
 import profileIcon from "./assets/profileIcon.svg";

@@ -1,6 +1,6 @@
 import CycleModel from "./cycleModel";
-import tick from "./assets/tick.png";
-import cyclehome from "./assets/cycle.png";
+import tick from "./assets/tick.webp";
+import cyclehome from "./assets/cycle.webp";
 import {Link} from 'react-router-dom'
 // import productvideo from './assets/'
 

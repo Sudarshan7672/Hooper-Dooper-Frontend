@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import cyclehome from "../assets/ProductGalleryImage/cyclehome.png";
+import cyclehome from "../assets/ProductGalleryImage/cyclehome.webp";
 import img1 from "../assets/ProductGalleryImage/img1.jpg";
 import img2 from "../assets/ProductGalleryImage/img2.jpg";
 import img3 from "../assets/ProductGalleryImage/img3.jpg";
@@ -10,7 +10,7 @@ import img5 from "../assets/ProductGalleryImage/img5.jpg";
 import img6 from "../assets/ProductGalleryImage/img6.jpg";
 import img7 from "../assets/ProductGalleryImage/img7.jpg";
 import img8 from "../assets/ProductGalleryImage/img8.jpg";
-import yellowlinehorizontal from "../assets/yellowlinehorizontal.png";
+import yellowlinehorizontal from "../assets/yellowlinehorizontal.webp";
 
 export default function ProductGallery() {
     useEffect(() => {

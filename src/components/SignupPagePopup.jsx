@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import googleicon from "../assets/googleicon.png";
-import HooperDooper_logo from "../assets/HooperDooper_logo.png";
-import cycle from "../assets/cycle.png";
+import googleicon from "../assets/googleicon.webp";
+import HooperDooper_logo from "../assets/HooperDooper_logo.webp";
+import cycle from "../assets/cycle.webp";
 import Modal from "./Modal"; // Adjust the path as needed
 // import LoginPagePopup from "./LoginPagePopup";
 // import Link from "react-router-dom";

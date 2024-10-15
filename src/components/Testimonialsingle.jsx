@@ -1,4 +1,4 @@
-import quotesign from '../assets/quotesign.png';
+import quotesign from '../assets/quotesign.webp';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

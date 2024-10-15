@@ -1,8 +1,9 @@
-import yellowlinehorizontal from "../assets/yellowlinehorizontal.png";
-import rightarrow from "../assets/rightarrow.png";
-import cycle from "../assets/cycle.png";
-import redellipse from "../assets/redellipse.png";
-import cyclevector from "../assets/cyclevector.png";
+import yellowlinehorizontal from "../assets/yellowlinehorizontal.webp";
+import rightarrow from "../assets/rightarrow.webp";
+import cycle from "../assets/cycle.webp";
+import redellipse from "../assets/redellipse.webp";
+import cyclevector from "../assets/cyclevector.webp";
+import {Link} from "react-router-dom";
 
 export default function OurProductHomepage() {
   return (
@@ -39,6 +40,7 @@ export default function OurProductHomepage() {
               confidence.
             </p>
           </div>
+          <Link to="/products">
           <div className="mt-6 lg:mt-8">
             <button className="h-[40px] rounded-md bg-black w-[150px] mx-auto lg:mx-0 flex items-center justify-center">
               <p className="text-white">Know More</p>
@@ -49,6 +51,7 @@ export default function OurProductHomepage() {
               />
             </button>
           </div>
+          </Link>
         </div>
 
         {/* Right section - Image and product info */}
@@ -72,7 +75,7 @@ export default function OurProductHomepage() {
               <p className="inline-block font-bold text-xl lg:text-3xl">
                 Rs.2,499
               </p>
-              <p className="border-2 border-red-500 rounded-lg w-[80px] h-[30px] ml-3 flex items-center justify-center text-red-500 font-bold text-sm">
+              <p className="border-2 hidden border-red-500 rounded-lg w-[80px] h-[30px] ml-3 flex items-center justify-center text-red-500 font-bold text-sm">
                 35% Off
               </p>
             </div>

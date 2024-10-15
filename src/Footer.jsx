@@ -1,22 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./assets/HooperDooper_Logo.png";
+import logo from "./assets/HooperDooper_Logo.webp";
 import callICon from "./assets/call-icon.svg";
 import mailIcon from "./assets/mail-icon.svg";
-import amazonPay from "./assets/AmazonPay.png";
-import googlePay from "./assets/GooglePay.png";
-import masterCard from "./assets/Mastercard.png";
-import visa from "./assets/Visa.png";
-import paytm from "./assets/Paytm.png";
-import paypal from "./assets/PayPal.png";
-import applePay from "./assets/ApplePay.png";
-import Bhim from "./assets/Bhim.png";
+import amazonPay from "./assets/AmazonPay.webp";
+import googlePay from "./assets/GooglePay.webp";
+import masterCard from "./assets/Mastercard.webp";
+import visa from "./assets/Visa.webp";
+import paytm from "./assets/Paytm.webp";
+import paypal from "./assets/PayPal.webp";
+import applePay from "./assets/ApplePay.webp";
+import Bhim from "./assets/Bhim.webp";
 
 const Footer = () => {
   return (
     <div className="text-zinc-50 w-full py-12 plus-jakarta-sans lg:px-28 px-4 items-center justify-around bg-[#1E1E2F] flex flex-col lg:flex-row">
       <div className="lg:w-1/3">
-        <img src={logo} alt="" className="w-44 mb-4" />
+        <Link to="/"><img src={logo} alt="" className="w-44 mb-4" /></Link>
         <p className="text-xl font-semibold">HooperDooper Toys Pvt Ltd</p>
         <p className="lg:w-3/4 my-3">
           SERENE COUNTY, VADGAON BUDRUK, PUNE, Maharashtra, India, 411041
@@ -37,10 +37,10 @@ const Footer = () => {
         <div className="quickLinks flex  flex-col">
           <h1 className="text-2xl font-semibold mb-4">Quick Links</h1>
           <div className="flex flex-col gap-2">
-            <Link to="">Home</Link>
-            <Link to="products">Our Products</Link>
-            <Link to="our-story">Our Story</Link>
-            <Link to="/">Testimonials</Link>
+            <Link to="/">Home</Link>
+            <Link to="/products">Our Products</Link>
+            <Link to="/our-story">Our Story</Link>
+            {/* <Link to="/">Testimonials</Link> */}
             <Link to="/FAQ">FAQ</Link>
           </div>
         </div>
@@ -60,16 +60,16 @@ const Footer = () => {
             <div className="followus mt-8"></div>
             <p className="text-xl font-medium">Follow us</p>
             <div className="flex flex-row gap-4 mt-4">
-              <Link to="">
+              <Link to="https://www.facebook.com/profile.php?id=61566603255657">
                 <i className="fab fa-facebook-f "></i>
               </Link>
-              <Link to="">
-                <i className="fab fa-twitter"></i>
+              <Link to="https://x.com/HooperDooper__">
+                <i className="fab fa-x"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.instagram.com/hooperdooper_/">
                 <i className="fab fa-instagram"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.linkedin.com/in/hooperdooper/">
                 <i className="fab fa-linkedin-in"></i>
               </Link>
             </div>

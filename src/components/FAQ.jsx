@@ -67,9 +67,9 @@ export default function FAQ() {
                 usability of balance bike and also height of balance bike is in
                 proper range. 5 year kids would be too tall for this bike. We
                 would recommend to buy 16"- 20" bicycle and remove pedal for
-                time-being.
-                <a href="" className="underline">
-                  example@gmail.com
+                time-being.{" "} Contact us at {" "}
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=care.hooperdooper@gmail.com" target="new" className="underline">
+                care.hooperdooper@gmail.com
                 </a>{" "}
                 for assistance.
               </p>
@@ -98,11 +98,11 @@ export default function FAQ() {
               <p>
                 Unfortunatey, No, although we could have loved to do that.
                 That’s the reason we have kept lots of videos and picture on
-                website.
-                <a href="" className="underline">
-                  example@gmail.com
+                website {" "}
+                <a href="https://hooperdooper.in/" className="underline">
+                  HooperDooper.in
                 </a>
-                .
+                
               </p>
             </div>
           </details>

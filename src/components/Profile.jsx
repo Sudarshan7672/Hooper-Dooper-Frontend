@@ -60,7 +60,7 @@ export default function Profile() {
       )}
       <section className="relative pt-40 pb-24">
         <img
-          src="https://pagedone.io/asset/uploads/1705473908.png"
+          src="https://pagedone.io/asset/uploads/1705473908.webp"
           alt="cover-image"
           className="w-full absolute top-0 left-0 z-0 h-60 object-cover"
         />

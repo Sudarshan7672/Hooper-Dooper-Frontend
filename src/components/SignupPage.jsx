@@ -1,6 +1,6 @@
-import googleicon from "../assets/googleicon.png";
-import HooperDooper_logo from "../assets/HooperDooper_Logo.png";
-import cycle from "../assets/cycle.png";
+import googleicon from "../assets/googleicon.webp";
+import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
+import cycle from "../assets/cycle.webp";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -49,7 +49,7 @@ export default function SignupPage() {
         </div>
       )}
       {/* main div */}
-      <div className="w-full sm:w-[70vw] m-auto py-20 px-8 flex flex-col lg:flex-row justify-center">
+      <div className="w-full sm:w-[70vw] m-auto py-20 px-8 flex flex-col lg:pt-[150px] lg:flex-row justify-center">
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
@@ -122,6 +122,7 @@ export default function SignupPage() {
               <div className="w-full flex justify-center mt-[5px]">
                 <p>OR</p>
               </div>
+              <Link to="/continuewithgoogle">
               <div className="flex h-[48px] mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
                 <div className="p-1 bg-white rounded-xl">
                   <img
@@ -134,6 +135,7 @@ export default function SignupPage() {
                   Continue With Google
                 </p>
               </div>
+              </Link>
             </form>
             <div className="flex-col justify-center items-center mt-5 w-full">
               <div className="w-full flex justify-center">

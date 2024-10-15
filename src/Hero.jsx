@@ -1,5 +1,5 @@
 import CycleModel from "./cycleModel";
-import tick from './assets/tick.png'
+import tick from './assets/tick.webp'
 import {Link} from 'react-router-dom'
 
 export default function Hero() {

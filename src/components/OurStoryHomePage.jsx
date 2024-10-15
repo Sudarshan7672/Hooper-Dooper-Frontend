@@ -1,7 +1,8 @@
-import yellowlinehorizontal from "../assets/yellowlinehorizontal.png";
-import rightarrow from "../assets/rightarrow.png";
-import cyclehome from "../assets/cyclehome.png";
-import cyclehomevector from "../assets/cyclehomevector.png";
+import yellowlinehorizontal from "../assets/yellowlinehorizontal.webp";
+import rightarrow from "../assets/rightarrow.webp";
+import cyclehome from "../assets/cyclehome.webp";
+import cyclehomevector from "../assets/cyclehomevector.webp";
+import { Link } from "react-router-dom";
 
 export default function OurStoryHomePage() {
   return (
@@ -49,6 +50,7 @@ export default function OurStoryHomePage() {
               delightful experiences to the little one.
             </p>
           </div>
+          <Link to="/our-story">
           <div className="mt-6 lg:mt-8">
             <button className="h-[40px] rounded-md bg-black w-[150px] mx-auto lg:mx-0 flex items-center justify-center">
               <p className="text-white">Know More</p>
@@ -59,6 +61,7 @@ export default function OurStoryHomePage() {
               />
             </button>
           </div>
+          </Link>
         </div>
       </div>
     </>
