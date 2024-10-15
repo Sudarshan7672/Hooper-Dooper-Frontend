@@ -17,6 +17,7 @@ import Profile from "./components/Profile.jsx";
 import AddressPage from "./components/AddressPage.jsx";
 import FAQ from "./components/FAQ.jsx";
 import AuthGoogle from "./AuthGoogle.jsx";
+import Cart from "./components/Cart.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -40,7 +41,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/products" element={<BalanceBike />} />
         <Route path="/our-story" element={<Story />} />
-        <Route path="/cart" element={<BalanceBike />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />

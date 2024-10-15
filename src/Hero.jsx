@@ -64,7 +64,7 @@ export default function Hero() {
             <p className="mt-[10px]">Watch our video</p>
           </div>
           <div className="lg:w-[100px] lg:h-[150px] lg:mb-[-70px] lg:rounded-xl lg:ml-[-50px] overflow-hidden inline-block">
-            <video src="/HeroVideo.mp4" autoPlay muted loop></video>
+            <video src="/HeroVideo.mp4" loading="lazy" autoPlay muted loop></video>
           </div>
         </div>
 

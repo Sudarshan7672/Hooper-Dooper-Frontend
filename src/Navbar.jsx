@@ -4,7 +4,7 @@ import Hamburger from "hamburger-react";
 import shoppingCart from "./assets/shopping-cart.svg";
 import profileIcon from "./assets/profileIcon.svg";
 import { Link } from "react-router-dom";
-import LoginPagePopup from "./components/LoginPagePopup";
+import HooperDooperLogo from "./assets/HooperDooperLogo.svg"
 
 const Navbar = () => {
   useEffect(() => {
@@ -32,7 +32,7 @@ const Navbar = () => {
           <Hamburger toggled={isOpen} toggle={handleClick} />
         </div>
         <a href="/" className="logo">
-          <img src={HooperDooper_logo} alt="HooperDooper_logo" />
+          <img src={HooperDooperLogo} height="100px"width="100px" alt="HooperDooper_logo" />
         </a>
       </div>
       <div
@@ -49,7 +49,7 @@ const Navbar = () => {
           Our Story
         </Link>
         <div className=" flex gap-6 items-center">
-          <Link to="cart">
+          <Link>
             <img src={shoppingCart} alt="shopping-cart" />
           </Link>
           <div className="divider bg-zinc-800 h-10 w-[1.5px]"></div>

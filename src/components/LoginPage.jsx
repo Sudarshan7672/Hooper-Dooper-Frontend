@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import googleicon from "../assets/googleicon.webp";
-import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
+// import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
 import cycle from "../assets/cycle.webp";
 import { Link } from "react-router-dom";
+import HooperDooperLogo from "../assets/HooperDooperLogo.svg"
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -35,7 +36,7 @@ export default function LoginPage() {
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-            <img src={HooperDooper_logo} loading="lazy" alt="HooperDooper Logo" />
+            <img src={HooperDooperLogo} width="100px" height="100px" loading="lazy" alt="HooperDooper Logo" />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>

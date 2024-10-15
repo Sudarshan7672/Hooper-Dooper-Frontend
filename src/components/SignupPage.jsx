@@ -1,5 +1,5 @@
 import googleicon from "../assets/googleicon.webp";
-import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
+import HooperDooperLogo from "../assets/HooperDooperLogo.svg";
 import cycle from "../assets/cycle.webp";
 import axios from "axios";
 import { useEffect } from "react";
@@ -57,7 +57,7 @@ export default function SignupPage() {
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-            <img src={HooperDooper_logo} alt="Hooper Dooper Logo" loading="lazy" />
+          <img src={HooperDooperLogo} width="100px" height="100px" loading="lazy" alt="HooperDooper Logo" />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>

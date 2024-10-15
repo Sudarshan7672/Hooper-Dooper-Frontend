@@ -50,42 +50,42 @@ export default function Testimonialsingle() {
 const Testimonialsarray = [
     {
         id: 1,
-        name: "Sudarshan Kakad",
+        name: "User 1",
         review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
     },
     {
         id: 2,
-        name: "Aditya Kakad",
+        name: "User 2",
         review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
     },
     {
         id: 3,
-        name: "Sudarshan Kakad",
+        name: "User 3",
         review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
     },
     {
         id: 4,
-        name: "Sudarshan Kakad",
+        name: "User 4",
         review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
     },
     {
         id: 5,
-        name: "Sudarshan Kakad",
+        name: "User 5",
         review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
     },
     {
       id: 6,
-      name: "Sudarshan Kakad",
+      name: "User 6",
       review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
   },
   {
     id: 7,
-    name: "Sudarshan Kakad",
+    name: "User 7",
     review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
 },
 {
   id: 8,
-  name: "Sudarshan Kakad",
+  name: "User 8",
   review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
 },
 ]

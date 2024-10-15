@@ -11,12 +11,14 @@ import paytm from "./assets/Paytm.webp";
 import paypal from "./assets/PayPal.webp";
 import applePay from "./assets/ApplePay.webp";
 import Bhim from "./assets/Bhim.webp";
+import HooperDooperLogo from  "./assets/HooperDooperLogo.svg"
 
 const Footer = () => {
   return (
     <div className="text-zinc-50 w-full py-12 plus-jakarta-sans lg:px-28 px-4 items-center justify-around bg-[#1E1E2F] flex flex-col lg:flex-row">
       <div className="lg:w-1/3">
-        <Link to="/"><img src={logo} alt="" className="w-44 mb-4" /></Link>
+        <Link to="/"><img src={HooperDooperLogo} height="100px"width="100px" alt="HooperDooper_logo" />
+        </Link>
         <p className="text-xl font-semibold">HooperDooper Toys Pvt Ltd</p>
         <p className="lg:w-3/4 my-3">
           SERENE COUNTY, VADGAON BUDRUK, PUNE, Maharashtra, India, 411041
