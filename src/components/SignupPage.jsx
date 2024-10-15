@@ -40,9 +40,9 @@ export default function SignupPage() {
         }, 3000);
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
-        toast.error(err);
+        toast.error(err.response.data.message);
+        console.log(err);
       });
   };
   useEffect(() => {
