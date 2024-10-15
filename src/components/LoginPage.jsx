@@ -38,7 +38,7 @@ export default function LoginPage() {
         enablePageScroll();
       })
       .catch((err) => {
-        toast.error(err?.response?.data?.message?);
+        toast.error(err?.response?.data?.message);
         console.log(err);
         setIsLoading(false);
         enablePageScroll();
