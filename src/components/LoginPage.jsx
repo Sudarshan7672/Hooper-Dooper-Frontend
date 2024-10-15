@@ -5,6 +5,7 @@ import googleicon from "../assets/googleicon.webp";
 import cycle from "../assets/cycle.webp";
 import { Link } from "react-router-dom";
 import HooperDooperLogo from "../assets/HooperDooperLogo.svg";
+import { toast } from "react-toastify";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,6 +23,7 @@ export default function LoginPage() {
           password: password,
         },
         {
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
