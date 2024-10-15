@@ -15,7 +15,7 @@ export default function OurProductHomepage() {
             <img
               src={yellowlinehorizontal}
               className="h-1 w-[30px] lg:w-[40px] mt-1"
-              alt=""
+              alt="yellow line horizontal"
             />
             <p className="text-lg lg:text-xl ml-3 lg:ml-5">OUR PRODUCT</p>
           </div>
@@ -57,7 +57,7 @@ export default function OurProductHomepage() {
         {/* Right section - Image and product info */}
         <div className="w-full lg:w-[30%] mt-10 lg:mt-0 m-auto overflow-hidden border border-gray-600 rounded-lg">
           <div>
-            <img src={cycle} className="mt-[5px] scale-90" alt="cycle" />
+            <img src={cycle} className="mt-[5px] scale-90" loading="lazy" alt="cycle" />
           </div>
           <div className="w-[90%] m-auto">
             <div>
@@ -68,6 +68,7 @@ export default function OurProductHomepage() {
                 src={redellipse}
                 className="inline-block w-[8px] h-[8px] mr-2"
                 alt="red ellipse"
+                
               />
               <p className="font-bold text-red-600">Red</p>
             </div>
@@ -81,7 +82,7 @@ export default function OurProductHomepage() {
             </div>
             <hr className="mt-4" />
             <div className="mt-4">
-              <img src={cyclevector} className="mx-auto" alt="cycle vector" />
+              <img src={cyclevector} className="mx-auto" loading="lazy" alt="cycle vector" />
             </div>
             <div>
               <button className="rounded-3xl bg-green-600 w-[180px] h-[40px] text-white text-lg lg:text-2xl font-bold mt-4 mb-4 mx-auto lg:mx-0">

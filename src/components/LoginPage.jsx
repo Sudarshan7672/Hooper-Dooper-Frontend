@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useEffect } from "react";
 import googleicon from "../assets/googleicon.webp";
 import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
 import cycle from "../assets/cycle.webp";
@@ -23,6 +24,10 @@ export default function LoginPage() {
       });
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {/* main div */}
@@ -30,7 +35,7 @@ export default function LoginPage() {
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-            <img src={HooperDooper_logo} alt="" />
+            <img src={HooperDooper_logo} loading="lazy" alt="HooperDooper Logo" />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>
@@ -39,7 +44,8 @@ export default function LoginPage() {
             <img
               src={cycle}
               className="w-[150px] sm:w-[300px] h-[100px] sm:h-[200px]"
-              alt=""
+              alt="Cycle"
+              loading="lazy"
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import cyclehome from "../assets/ProductGalleryImage/cyclehome.webp";
+// import cyclehome from "../assets/ProductGalleryImage/cyclehome.webp";
 import img1 from "../assets/ProductGalleryImage/img1.jpg";
 import img2 from "../assets/ProductGalleryImage/img2.jpg";
 import img3 from "../assets/ProductGalleryImage/img3.jpg";
@@ -62,14 +62,14 @@ export default function ProductGallery() {
             </div>
             <div className="swiper">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide card"><img src={img1} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img2} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img3} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img4} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img5} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img6} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img7} alt="Cycle Home" /></div>
-                    <div className="swiper-slide card"><img src={img8} alt="Cycle Home" /></div>
+                    <div className="swiper-slide card"><img src={img1} loading="lazy" alt="Image 1" /></div>
+                    <div className="swiper-slide card"><img src={img2} loading="lazy" alt="Image 2" /></div>
+                    <div className="swiper-slide card"><img src={img3} loading="lazy" alt="Image 3" /></div>
+                    <div className="swiper-slide card"><img src={img4} loading="lazy" alt="Image 4" /></div>
+                    <div className="swiper-slide card"><img src={img5} loading="lazy" alt="Image 5" /></div>
+                    <div className="swiper-slide card"><img src={img6} loading="lazy" alt="Image 6" /></div>
+                    <div className="swiper-slide card"><img src={img7} loading="lazy" alt="Image 7" /></div>
+                    <div className="swiper-slide card"><img src={img8} loading="lazy" alt="Image 8" /></div>
                 </div>
                 {/* Pagination */}
                 <div className="swiper-pagination"></div>

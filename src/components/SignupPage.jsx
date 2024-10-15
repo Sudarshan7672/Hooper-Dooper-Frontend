@@ -2,6 +2,7 @@ import googleicon from "../assets/googleicon.webp";
 import HooperDooper_logo from "../assets/HooperDooper_Logo.webp";
 import cycle from "../assets/cycle.webp";
 import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -35,6 +36,9 @@ export default function SignupPage() {
         toast.error("Signup failed. Please try again.");
       });
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {isLoading && (
@@ -53,7 +57,7 @@ export default function SignupPage() {
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
-            <img src={HooperDooper_logo} alt="" />
+            <img src={HooperDooper_logo} alt="Hooper Dooper Logo" loading="lazy" />
           </div>
           <div className="w-full mt-[20px] flex justify-center">
             <p>BALANCE BIKE</p>
@@ -62,7 +66,8 @@ export default function SignupPage() {
             <img
               src={cycle}
               className="w-[150px] sm:w-[300px] h-[100px] sm:h-[200px]"
-              alt=""
+              loading="lazy"
+              alt="Cycle Image"
             />
           </div>
         </div>
