@@ -4,7 +4,7 @@
 
 .swiper {
   width: 50vw;
-  height: 400px; /* Adjust the height as needed */
+  height: 500px; /* Adjust the height as needed */
   position: relative;
   overflow: hidden;
   border: none;
@@ -29,9 +29,28 @@
 }
 
 .card img {
-  width: 300px; /* Make the image fill the card */
-  height: 350px; /* Maintain aspect ratio */
+  width: 350px; /* Make the image fill the card */
+  height: 400px; /* Maintain aspect ratio */
   border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+
+  .swiper {
+    width: 90vw;
+    height: 350px; /* Adjust the height as needed */
+    position: relative;
+    overflow: hidden;
+    border: none;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  
+  .card img {
+    width: 300px; /* Fixed width for larger screens */
+    height: 350px; /* Maintain aspect ratio */
+  }
 }
 
 .swiper-button-next,

@@ -61,12 +61,14 @@ export default function HeroMobile() {
 
         <div className="flex flex-row w-[95vw] mt-[50px] m-auto">
           <div className="video flex-row flex-wrap w-[55%] h-[px] mt-[px]">
+            <Link to="/ourvideo">
             <div className="-rotate-90 w-[100%] ml-[-90px] mt-[30px] inline-block opacity-100 text-black text-[21px] font-extrabold font-['Plus Jakarta Sans']">
               <p className="">Watch our video</p>
             </div>
             <div className="w-[70%] ml-[50px] mt-[-80px] rounded-xl overflow-hidden inline-block">
               <video src='/HeroVideo.mp4' autoPlay muted loop></video>
             </div>
+            </Link>
           </div>
 
           <div className="flex-row flex-wrap justify-end items-end w-[45%] h-[px]">
@@ -87,44 +89,3 @@ export default function HeroMobile() {
     </>
   );
 }
-
-<div className="lg:mt-[-550px] h-[100%] w-[100%]">
-  {/* Descriptions1 */}
-  <div className="h-8 px-2.5 py-1.5 lg:absolute lg:top-[180px] lg:left-[280px]  bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
-    <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
-      <img src={tick} alt="" />
-    </div>
-    <div className="text-black text-base font-medium font-['Plus Jakarta Sans']">
-      Height Adjustable seat and handle height
-    </div>
-  </div>
-
-  {/* Descriptions2 */}
-  <div className="h-8 px-2.5 py-1.5 lg:absolute lg:top-[100px] lg:left-[800px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
-    <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
-      <img src={tick} alt="" />
-    </div>
-    <div className="text-black text-base font-medium font-['Plus Jakarta Sans']">
-      Light weight Mid steel frame
-    </div>
-  </div>
-
-  {/* Descriptions3 */}
-  <div className="h-8 px-2.5 py-1.5 lg:absolute lg:top-[350px] lg:left-[700px] lg:scale-90 bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
-    <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
-      <img src={tick} alt="" />
-    </div>
-    <div className="text-black text-base font-medium font-['Plus Jakarta Sans']">
-      Pedal Free Design
-    </div>
-  </div>
-  {/* Descriptions4 */}
-  <div className=" absolute h-8 px-2.5 py-1.5 lg:absolute lg:top-[430px] lg:left-[1000px] bg-white rounded-[15px] justify-center items-center gap-2.5 inline-flex">
-    <div className="w-[18px] h-[18px] bg-[#002aff] rounded-[9px] flex-col justify-center items-center inline-flex">
-      <img src={tick} alt="" />
-    </div>
-    <div className="text-black text-base font-medium font-['Plus Jakarta Sans']">
-      Puncture proof EVA tyre
-    </div>
-  </div>
-</div>;

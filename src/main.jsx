@@ -42,14 +42,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/products" element={<BalanceBike />} />
         <Route path="/our-story" element={<Story />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/user/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/ourvideo" element={<OurVideo />} />
         <Route path="/auth/google/success" element={<AuthGoogle />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   </React.StrictMode>
 );

@@ -6,6 +6,7 @@ import OurProductHomepage from "./components/OurProductHomepage.jsx";
 import OurStoryHomePage from "./components/OurStoryHomePage.jsx";
 import Testimonialsall from "./components/Testimonialsall.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
+import Cart from "./components/Cart.jsx";
 import { useEffect } from "react";
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
       </div>
       <div>
         <ProductGallery />
+      </div>
+      <div>
+        <Cart />
       </div>
     </>
   );

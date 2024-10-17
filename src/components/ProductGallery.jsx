@@ -47,7 +47,7 @@ export default function ProductGallery() {
 
     return (
         <div className="w-full lg:w-[80vw] m-auto mt-[20px] lg:mt-[50px]">
-            <div className="Ourproduct flex justify-start items-center">
+            <div className="Ourproduct ml-[10vw] flex justify-start items-center">
                 <img
                     src={yellowlinehorizontal}
                     className="h-1 w-[20px] lg:w-[40px] mt-[10px] lg:mt-[15px]"
@@ -56,7 +56,7 @@ export default function ProductGallery() {
                 <p className="text-base lg:text-xl ml-4 lg:ml-[20px]">PRODUCT</p>
             </div>
             <div>
-                <h1 className="text-2xl lg:text-3xl font-bold mt-[10px] lg:mt-[20px] font-sans">
+                <h1 className="text-2xl ml-[10vw] lg:text-3xl font-bold mt-[10px] lg:mt-[20px] font-sans">
                     PRODUCT GALLERY
                 </h1>
             </div>

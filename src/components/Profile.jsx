@@ -3,7 +3,7 @@ import AddressPage from "./AddressPage";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { enablePageScroll, disablePageScroll } from "scroll-lock";
+// import { enablePageScroll, disablePageScroll } from "scroll-lock";
 
 export default function Profile() {
   const [result, setResult] = useState([]);
