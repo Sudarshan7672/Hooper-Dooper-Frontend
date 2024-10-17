@@ -49,7 +49,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/ourvideo" element={<OurVideo />} />
         <Route path="/auth/google/success" element={<AuthGoogle />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   </React.StrictMode>
 );

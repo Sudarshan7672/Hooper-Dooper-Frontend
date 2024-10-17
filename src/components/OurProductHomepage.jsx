@@ -74,7 +74,7 @@ export default function OurProductHomepage() {
             </div>
             <div className="mt-4 flex justify-center lg:justify-start">
               <p className="inline-block font-bold text-xl lg:text-3xl">
-                Rs.2,499
+                Rs. 2,499/-
               </p>
               <p className="border-2 hidden border-red-500 rounded-lg w-[80px] h-[30px] ml-3 flex items-center justify-center text-red-500 font-bold text-sm">
                 35% Off

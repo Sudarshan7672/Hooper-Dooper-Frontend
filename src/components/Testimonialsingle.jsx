@@ -2,7 +2,7 @@ import quotesign from '../assets/quotesign.webp';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {PrevArrow, NextArrow} from "./SliderArrow";
+// import {PrevArrow, NextArrow} from "./SliderArrow";
 
 export default function Testimonialsingle() {
   const settings = {
@@ -11,8 +11,8 @@ export default function Testimonialsingle() {
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
+    // nextArrow: <NextArrow />,
     autoplay:true,
     pauseOnHover:true,
   };
@@ -50,42 +50,18 @@ export default function Testimonialsingle() {
 const Testimonialsarray = [
     {
         id: 1,
-        name: "User 1",
-        review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
+        name: "Sharang",
+        review: "Does exactly what it is supposed to do! Teaches my 2.5 year old to balance without the worry to pedal or break. Size has to be small so that the child can rest his/her feet on the ground. It takes a couple of days for the child to get hang of it. Best fun is if you've a gentle slope available for the child's to play. Prompt delivery, good communication, easy assembly & decent quality product.",
     },
     {
         id: 2,
-        name: "User 2",
-        review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
+        name: "Ashifa Sarkar Vasi",
+        review: "My daughter is 3 years old and has never ridden a tricycle or any other vehicle. She and we were keen she learn to ride a bike so I did a lot of research on the balance bike concept. I was sold on learning to balance first and then pedal later without training wheels. And I looked at foreign and domestic versions before I settled on this.",
     },
     {
         id: 3,
-        name: "User 3",
-        review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
+        name: "Hitesh Choudhary",
+        review: "Very good product. Unique design and affordable too. My daughter likes it very much. Thanks for introducing this unique concept in biking.",
     },
-    {
-        id: 4,
-        name: "User 4",
-        review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
-    },
-    {
-        id: 5,
-        name: "User 5",
-        review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
-    },
-    {
-      id: 6,
-      name: "User 6",
-      review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
-  },
-  {
-    id: 7,
-    name: "User 7",
-    review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
-},
-{
-  id: 8,
-  name: "User 8",
-  review: "Got on time, thanks to seller and courier partner. My lil son is so happy to have it, yet he is asking pappa where is the paddele!!! There is a issue with sit adjustment it got loosen frequently. Thinking to put some packings with the clamp. Very competitive prise compare to others but could be more lesser yet, considering material of construction.",
-},
+
 ]

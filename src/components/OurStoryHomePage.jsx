@@ -13,7 +13,7 @@ export default function OurStoryHomePage() {
         <div className="w-full lg:w-[30%] m-auto border border-gray-600 rounded-lg relative">
           <img
             src={cyclehomevector}
-            className="absolute  top-[-36px] right-[-37px] lg:top-[-40px] lg:right-[-40px] w-[60px] h-[50px]"
+            className="absolute hidden md:block lg:block  top-[-36px] right-[-37px] lg:top-[-40px] lg:right-[-40px] w-[60px] h-[50px]"
             alt="cycle vector"
           />
           <img src={cyclehome} alt="cycle home" loading="lazy" className="w-full" />
