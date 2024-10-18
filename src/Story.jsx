@@ -1,13 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import storyImage1 from "./assets/story-image-1.webp";
 import storyImage2 from "./assets/story-image-2.webp";
 import storyImage3 from "./assets/story-image-3.webp";
 import storyImage4 from "./assets/story-image-4.webp";
+import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const Story = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
+  useEffect(() => {
+    if (isAdded) {
+      setTimeout(() => {
+        setIsAdded(false);
+      }, 3000);
+    }
+  }, [isAdded]);
+
+  const addToCartHandler = (slug) => {
+    setIsLoading(true);
+    axios
+      .post(
+        "https://api.hooperdooper.in/cart/add",
+        {
+          product: slug,
+          quantity: 1,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+            withCredentials: true,
+          },
+        }
+      )
+      .then((res) => {
+        setIsLoading(false);
+        setIsAdded(true);
+        toast.success("Product added to cart");
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        toast.error(err?.response?.data?.message || "Something went wrong");
+      });
+  };
+
   return (
     <div className="pt-40 ">
       <div className="w-[80vw]  plus-jakarta-sans m-auto flex ">
@@ -89,12 +130,24 @@ const Story = () => {
           muted
           autoPlay
         ></video>
-        <Link
-          to=""
+        <button
+          onClick={() => {
+            addToCartHandler("self-balancing-cycle-red");
+          }}
           className="flex text-zinc-950 absolute bottom-[12vh] md:bottom-[8vh] lg:bottom-[4vh]  py-2 px-5 rounded-3xl border-white border-2 font-semibold capitalize text-xl left-[50%] -translate-x-[50%] flex-col justify-center bg-white/60 items-center"
         >
-          Add to Cart
-        </Link>
+          {isLoading ? (
+            <div className="flex-col gap-4  w-full h-full flex items-center justify-center">
+              <div className="w-8 h-8 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+                <div className="w-6 h-6 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+              </div>
+            </div>
+          ) : isAdded ? (
+            "Added to cart"
+          ) : (
+            "Add to cart"
+          )}
+        </button>
       </div>
     </div>
   );

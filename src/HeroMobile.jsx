@@ -1,6 +1,6 @@
 import tick from "./assets/tick.webp";
 import cyclehome from "./assets/cycle.webp";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 // import productvideo from './assets/'
 
 export default function HeroMobile() {
@@ -61,12 +61,12 @@ export default function HeroMobile() {
         <div className="flex flex-row w-[95vw] mt-[50px] m-auto lg:mt-[-180px]">
           <div className="video flex-row flex-wrap w-[55%] lg:h-[200px] h-[px] mt-[px]">
             <Link to="/ourvideo">
-            <div className="-rotate-90 lg:w-[30%] ml-[-120px] md:ml-[-110px] lg:mt-[0px] lg:ml-[40px] lg:mr-[280px] lg:h-[%]  mt-[30px] inline-block opacity-100 text-black text-[21px] font-extrabold font-['Plus Jakarta Sans']">
-              <p className="mr-[100px] lg:mr-0">Watch our video</p>
-            </div>
-            <div className="w-[70%] lg:w-[20%] lg:h-[200px] lg:ml-[200px] ml-[50px] mt-[-80px] rounded-xl overflow-hidden inline-block">
-              <video src='/HeroVideo.mp4' autoPlay muted loop></video>
-            </div>
+              <div className="-rotate-90 lg:w-[30%] ml-[-120px] md:ml-[-110px] lg:mt-[0px] lg:ml-[40px] lg:mr-[280px] lg:h-[%]  mt-[30px] inline-block opacity-100 text-black text-[21px] font-extrabold font-['Plus Jakarta Sans']">
+                <p className="mr-[100px] lg:mr-0">Watch our video</p>
+              </div>
+              <div className="w-[70%] lg:w-[20%] lg:h-[200px] lg:ml-[200px] ml-[50px] mt-[-80px] rounded-xl overflow-hidden inline-block">
+                <video src="/HeroVideo.mp4" autoPlay muted loop></video>
+              </div>
             </Link>
           </div>
 
@@ -76,11 +76,11 @@ export default function HeroMobile() {
               to the little one
             </div>
             <Link to="/FAQ">
-            <div className="px-10 py-2.5 lg:bg-white/20 rounded-[50px] border lg:border-white border-blue-500 lg:backdrop-blur-[10px] justify-center items-center gap-2.5 inline-flex lg:ml-[500px] mt-[20px] lg:mt-[0px]">
-            <div className="lg:text-white text-black text-lg font-semibold font-['Plus Jakarta Sans'] leading-[27px] tracking-wide">
-              FAQ
-            </div>
-          </div>
+              <div className="px-10 py-2.5 lg:bg-white/20 rounded-[50px] border lg:border-white border-blue-500 lg:backdrop-blur-[10px] justify-center items-center gap-2.5 inline-flex lg:ml-[500px] mt-[20px] lg:mt-[0px]">
+                <div className="lg:text-white text-black text-lg font-semibold font-['Plus Jakarta Sans'] leading-[27px] tracking-wide">
+                  FAQ
+                </div>
+              </div>
             </Link>
           </div>
         </div>
