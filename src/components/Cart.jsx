@@ -50,7 +50,7 @@ const Cart = () => {
       });
   }, []);
 
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
 
   const updateQuantity = (id, newQuantity) => {
     setProducts(
