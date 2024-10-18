@@ -41,11 +41,12 @@ const Cart = () => {
       })
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
+        setProducts(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         setIsLoading(false);
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message);
       });
   }, []);
 
