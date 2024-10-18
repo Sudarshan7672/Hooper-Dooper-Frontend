@@ -29,6 +29,7 @@ const Cart = () => {
   // ];
 
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -77,6 +78,24 @@ const Cart = () => {
       style: "currency",
       currency: "INR",
     }).format(amount);
+  };
+
+  const removeFromCartHandler = (id) => {
+    axios
+      .delete(`https://api.hooperdooper.in/cart/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+          withCredentials: true,
+        },
+      })
+      .then((res) => {
+        setProducts(products.filter((product) => product.id !== id));
+        toast.success(res.data.data.message);
+      })
+      .catch((err) => {
+        toast.error(err?.response?.data?.message);
+      });
   };
 
   return (
@@ -140,20 +159,26 @@ const Cart = () => {
                       <p className="text-sm">
                         {formatCurrency(product.price * product.quantity)}
                       </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
+                      <button
+                        onClick={() => {
+                          removeFromCartHandler(product.id);
+                        }}
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
