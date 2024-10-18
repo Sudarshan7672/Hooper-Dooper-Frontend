@@ -41,8 +41,8 @@ const Cart = () => {
       })
       .then((res) => {
         setIsLoading(false);
-        setProducts(res.data);
-        console.log(res.data);
+        setProducts(res.data.data);
+        console.log(res.data.data);
       })
       .catch((err) => {
         setIsLoading(false);
@@ -87,7 +87,7 @@ const Cart = () => {
           <div className="rounded-lg md:w-2/3">
             {products.map((product, idx) => (
               <div
-                key={product?.idx}
+                key={idx}
                 className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
               >
                 <img
