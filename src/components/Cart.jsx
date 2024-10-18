@@ -32,7 +32,13 @@ const Cart = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://api.hooperdooper.in/cart")
+      .get("https://api.hooperdooper.in/cart", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+          withCredentials: true,
+        },
+      })
       .then((res) => {
         setIsLoading(false);
         console.log(res);
