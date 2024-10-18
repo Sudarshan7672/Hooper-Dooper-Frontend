@@ -24,6 +24,7 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "remixicon": "^4.3.0",
+    "scroll-lock": "^2.1.5",
     "slick": "^1.12.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
