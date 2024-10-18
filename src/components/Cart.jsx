@@ -59,18 +59,17 @@ const Cart = () => {
       )
     );
   };
-  if (products) {
-    let subTotal = products.reduce(
+  const shipping = 500; // Default shipping cost
+  let subTotal = 0; // Define subTotal outside
+
+  if (products.length > 0) {
+    subTotal = products.reduce(
       (acc, product) => acc + product?.price * product?.quantity,
       0
     );
-    const shipping = 500;
-    const total = subTotal + shipping;
-  } else {
-    let subTotal = 0;
-    const shipping = 0;
-    const total = subTotal + shipping;
   }
+
+  const total = subTotal + shipping; // Total cost including shipping
 
   // Function to format numbers to Indian currency format
   const formatCurrency = (amount) => {
