@@ -5,19 +5,35 @@ import Hamburger from "hamburger-react";
 import profileIcon from "./assets/profileIcon.svg";
 import { Link } from "react-router-dom";
 import HooperDooperLogo from "./assets/HooperDooperLogo.svg";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-  useEffect(() => {
-    setIsLoading(true);
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedin(true);
-    }
-    setIsLoading(false);
-  }, []);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const [isLoggedin, setIsLoggedin] = useState(false);
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get("https://api.hooperdooper.in/isAuthenticated", {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        console.log(res?.data);
+        if (res?.data?.authenticated) {
+          setIsLoggedin(true);
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
+  }, []);
+
   const handleClick = () => {
     setOpen(!isOpen);
   };

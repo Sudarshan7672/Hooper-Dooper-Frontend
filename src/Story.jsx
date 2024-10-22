@@ -31,10 +31,9 @@ const Story = () => {
           quantity: 1,
         },
         {
+          withCredentials: true,
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
             "Content-Type": "application/json",
-            withCredentials: true,
           },
         }
       )

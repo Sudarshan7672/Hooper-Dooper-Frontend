@@ -10,8 +10,20 @@ export default function Profile() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setError] = useState(null);
   const logooutHandler = () => {
-    localStorage.removeItem("token");
-    window.location.href = "/login";
+    axios
+      .get("https://api.hooperdooper.in/auth/v1/logout", {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response?.data);
+        window.location.href = "/login";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   useEffect(() => {
     setIsLoading(true);

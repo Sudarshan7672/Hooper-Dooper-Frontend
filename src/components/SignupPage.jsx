@@ -33,7 +33,7 @@ export default function SignupPage() {
         console.log(res.data);
         setLoading(false);
         toast.success(
-          "Signup successful. redirecting to login page. in 3 seconds"
+          "Signup successful. Please check your email to verify your account. Redirecting to login page..."
         );
         setTimeout(() => {
           window.location.href = "/login";

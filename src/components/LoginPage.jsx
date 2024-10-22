@@ -17,9 +17,9 @@ export default function LoginPage() {
     disablePageScroll();
     axios
       .post(
-        "https://api.hooperdooper.in/auth/v1/login",
+        "https://api.hooperdooper.in/auth/v2/login",
         {
-          email: email,
+          username: email.split("@")[0],
           password: password,
         },
         {
@@ -30,12 +30,9 @@ export default function LoginPage() {
         }
       )
       .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("token", res?.data?.token);
-
-        window.location.href = "/";
-        setIsLoading(false);
         enablePageScroll();
+        setIsLoading(false);
+        window.location.href = "/";
       })
       .catch((err) => {
         toast.error(err?.response?.data?.message);
@@ -43,6 +40,10 @@ export default function LoginPage() {
         setIsLoading(false);
         enablePageScroll();
       });
+  };
+
+  const googleAuthHandler = () => {
+    window.open("https://api.hooperdooper.in/auth/google", "_self");
   };
 
   useEffect(() => {
@@ -135,7 +136,7 @@ export default function LoginPage() {
               <div className="w-full flex justify-center text-xl mt-[5px]">
                 <p>OR</p>
               </div>
-              <Link to="/continuewithgoogle">
+              <button onClick={googleAuthHandler}>
                 <div className="flex h-[48px]  mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
                   <div className="p-1 bg-white rounded-xl">
                     <img
@@ -148,7 +149,7 @@ export default function LoginPage() {
                     Continue With Google
                   </p>
                 </div>
-              </Link>
+              </button>
             </form>
             <div className="flex-col justify-center items-center mt-[10px] w-full">
               <div className="w-full flex justify-center">

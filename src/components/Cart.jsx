@@ -35,15 +35,14 @@ const Cart = () => {
     axios
       .get("https://api.hooperdooper.in/cart", {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
-          withCredentials: true,
         },
+        withCredentials: true,
       })
       .then((res) => {
         setIsLoading(false);
-        setProducts(res.data.data);
-        console.log(res.data.data);
+        setProducts(res?.data?.data);
+        console.log(res?.data?.data);
       })
       .catch((err) => {
         setIsLoading(false);

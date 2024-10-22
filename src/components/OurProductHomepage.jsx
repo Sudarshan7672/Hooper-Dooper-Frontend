@@ -28,10 +28,9 @@ export default function OurProductHomepage() {
         },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
             "Content-Type": "application/json",
-            withCredentials: true,
           },
+          withCredentials: true,
         }
       )
       .then((res) => {
