@@ -136,19 +136,21 @@ export default function LoginPage() {
               <div className="w-full flex justify-center text-xl mt-[5px]">
                 <p>OR</p>
               </div>
-              <button onClick={googleAuthHandler}>
-                <div className="flex h-[48px]  mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
-                  <div className="p-1 bg-white rounded-xl">
-                    <img
-                      src={googleicon}
-                      className="h-[22px] w-[22px]"
-                      alt="Google Icon"
-                    />
-                  </div>
-                  <p className="text-white ml-[10px] font-sans">
-                    Continue With Google
-                  </p>
+
+              <button
+                onClick={googleAuthHandler}
+                className="flex h-[48px] px-8  mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center"
+              >
+                <div className="p-1 bg-white rounded-xl">
+                  <img
+                    src={googleicon}
+                    className="h-[22px] w-[22px]"
+                    alt="Google Icon"
+                  />
                 </div>
+                <p className="text-white ml-[10px] font-sans">
+                  Continue With Google
+                </p>
               </button>
             </form>
             <div className="flex-col justify-center items-center mt-[10px] w-full">

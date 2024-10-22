@@ -45,6 +45,10 @@ export default function SignupPage() {
         console.log(err);
       });
   };
+
+  const googleAuthHandler = () => {
+    window.open("https://api.hooperdooper.in/auth/google", "_self");
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -142,20 +146,22 @@ export default function SignupPage() {
               <div className="w-full flex justify-center mt-[5px]">
                 <p>OR</p>
               </div>
-              <Link to="/continuewithgoogle">
-                <div className="flex h-[48px] mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center">
-                  <div className="p-1 bg-white rounded-xl">
-                    <img
-                      src={googleicon}
-                      className="h-[22px] w-[22px]"
-                      alt="Google Icon"
-                    />
-                  </div>
-                  <p className="text-white ml-[10px] font-sans">
-                    Continue With Google
-                  </p>
+
+              <button
+                onClick={googleAuthHandler}
+                className="flex h-[48px] mt-[5px] bg-blue-500 w-full rounded-lg justify-center items-center"
+              >
+                <div className="p-1 bg-white rounded-xl">
+                  <img
+                    src={googleicon}
+                    className="h-[22px] w-[22px]"
+                    alt="Google Icon"
+                  />
                 </div>
-              </Link>
+                <p className="text-white ml-[10px] font-sans">
+                  Continue With Google
+                </p>
+              </button>
             </form>
             <div className="flex-col justify-center items-center mt-5 w-full">
               <div className="w-full flex justify-center">

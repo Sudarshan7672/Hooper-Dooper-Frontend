@@ -1,12 +1,9 @@
 import "./App.css";
-// import Hero from "./Hero";
 import HeroMobile from "./HeroMobile";
-// import HeroMedium from "./HeroMedium";
 import OurProductHomepage from "./components/OurProductHomepage.jsx";
 import OurStoryHomePage from "./components/OurStoryHomePage.jsx";
 import Testimonialsall from "./components/Testimonialsall.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
-// import Cart from "./components/Cart.jsx";
 import { useEffect } from "react";
 
 function App() {
