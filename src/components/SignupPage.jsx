@@ -30,10 +30,10 @@ export default function SignupPage() {
         }
       )
       .then((res) => {
-        console.log(res.data);
+        console.log(res?.data);
         setLoading(false);
         toast.success(
-          "Signup successful. Please check your email to verify your account. Redirecting to login page..."
+          "Signup successful. Redirecting to login page in 3 seconds"
         );
         setTimeout(() => {
           window.location.href = "/login";
@@ -41,7 +41,7 @@ export default function SignupPage() {
       })
       .catch((err) => {
         setLoading(false);
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message);
         console.log(err);
       });
   };

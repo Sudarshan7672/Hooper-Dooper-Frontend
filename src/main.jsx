@@ -16,9 +16,11 @@ import "react-toastify/dist/ReactToastify.css";
 import Profile from "./components/Profile.jsx";
 import AddressPage from "./components/AddressPage.jsx";
 import FAQ from "./components/FAQ.jsx";
-import AuthGoogle from "./AuthGoogle.jsx";
 import Cart from "./components/Cart.jsx";
 import OurVideo from "./components/OurVideo.jsx";
+
+import ResetPassword from "./ResetPassword.jsx";
+import ForgotPassword from "./ForgotPassword.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -47,7 +49,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/ourvideo" element={<OurVideo />} />
-        <Route path="/auth/google" element={<AuthGoogle />} />
+        <Route
+          path="/reset-password/:reset-token"
+          element={<ResetPassword />}
+        />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
       <Footer />
     </Router>

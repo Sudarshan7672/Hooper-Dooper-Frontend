@@ -128,7 +128,7 @@ export default function LoginPage() {
                   </div>
                 </button>
               </div>
-              <Link to="/forgotpassword">
+              <Link to="/forgot-password">
                 <div className="flex justify-center mt-[5px]">
                   <p className="text-sm">Forgot Password?</p>
                 </div>
