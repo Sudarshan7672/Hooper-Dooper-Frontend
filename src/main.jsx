@@ -49,10 +49,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/address" element={<AddressPage />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/ourvideo" element={<OurVideo />} />
-        <Route
-          path="/reset-password/:reset-token"
-          element={<ResetPassword />}
-        />
+        <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>

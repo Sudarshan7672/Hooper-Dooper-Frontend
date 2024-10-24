@@ -12,6 +12,7 @@ const ResetPassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  console.log(useParams());
   const { resetToken } = useParams();
   const handleSubmit = (e) => {
     e.preventDefault();
