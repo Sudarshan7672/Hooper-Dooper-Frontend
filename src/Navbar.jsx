@@ -61,19 +61,19 @@ const Navbar = () => {
         onClick={closeMenu}
       >
         <Link
-          className="hidden lg:flex md:flex hover:text-zinc-700 transition-all duration-300 ease-in-out"
+          className="hidden lg:flex md:flex hover:text-zinc-100 transition-all duration-300 ease-in-out"
           to=""
         >
           Home
         </Link>
         <Link
-          className="hidden lg:flex md:flex hover:text-zinc-700 transition-all duration-300 ease-in-out"
+          className="hidden lg:flex md:flex hover:text-zinc-100 transition-all duration-300 ease-in-out"
           to="products"
         >
           Our Products
         </Link>
         <Link
-          className="hidden lg:flex md:flex hover:text-zinc-700 transition-all duration-300 ease-in-out"
+          className="hidden lg:flex md:flex hover:text-zinc-100 transition-all duration-300 ease-in-out"
           to="our-story"
         >
           Our Story
@@ -81,7 +81,7 @@ const Navbar = () => {
         <div className=" flex gap-6 items-center">
           <Link to="/user/cart">
             {/* <img src={shoppingCart} className="hover:color-white" alt="shopping-cart" /> */}
-            <i className="fa-solid fa-cart-shopping hover:text-zinc-700 transition-all duration-300 ease-in-out"></i>
+            <i className="fa-solid fa-cart-shopping hover:text-zinc-100 transition-all duration-300 ease-in-out"></i>
           </Link>
           <div className="divider bg-zinc-800 h-10 w-[1.5px]"></div>
           {isLoggedin ? (
@@ -91,7 +91,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="py-1 px-4 bg-zinc-950 text-zinc-50 poppins-semibold rounded-md"
+              className="py-1 px-4 bg-zinc-950 text-zinc-50 poppins-semibold rounded-md hover:scale-110"
             >
               Login
             </Link>

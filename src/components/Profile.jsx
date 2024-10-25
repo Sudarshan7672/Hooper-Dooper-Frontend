@@ -126,13 +126,13 @@ export default function Profile() {
             <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
               My Orders
             </a>
-            <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
+            {/* <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
               My Cart
-            </a>
+            </a> */}
             <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
               Edit profile
             </a>
-            <AddressPage />
+            {/* <AddressPage /> */}
           </div>
         </div>
       </section>
