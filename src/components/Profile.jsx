@@ -1,9 +1,33 @@
 import { Link } from "react-router-dom";
 import AddressPage from "./AddressPage";
 import { useState, useEffect } from "react";
+import EditProfileForm from "./EditProfileFrom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
+
+const isorders = [
+  {
+    productname: "Self Balancing Cycle - Red",
+    size: "2m*1.5m",
+    color: "Red",
+    price: 2499,
+    description:
+      "A balance bike is a two-wheeled pedal-less bike that teaches toddlers as young as 18-months to balance on two wheels. A child’s physical ability such as balance, steering, and coordination are acquired faster on the balance bike than on a bike equipped with training wheels and pedal. Learning to ride a bicycle is one of life’s milestones and the first step to gaining true independence. Balance Bike gives true independence along with a huge boost in confidence.",
+      orderdate: "2021-09-01",
+      totalamount: 2499,
+      status: "Delivered",
+  },
+  {
+    productname: "Self Balancing Cycle - Red",
+    size: "2m*1.5m",
+    color: "Red",
+    price: 2499,
+    description:
+      "A balance bike is a two-wheeled pedal-less bike that teaches toddlers as young as 18-months to balance on two wheels. A child’s physical ability such as balance, steering, and coordination are acquired faster on the balance bike than on a bike equipped with training wheels and pedal. Learning to ride a bicycle is one of life’s milestones and the first step to gaining true independence. Balance Bike gives true independence along with a huge boost in confidence.",
+      orderdate: "2021-09-01",
+  },
+]
 
 export default function Profile() {
   const [result, setResult] = useState([]);
@@ -123,18 +147,51 @@ export default function Profile() {
             </button>
           </div>
           <div className="flex max-sm:flex-wrap max-sm:justify-center items-center gap-3">
+            <button>
+              <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
+                My Orders
+              </a>
+            </button>
+            <button>
             <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
-              My Orders
+              Verify Email
             </a>
-            {/* <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
-              My Cart
-            </a> */}
-            <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
-              Edit profile
-            </a>
-            {/* <AddressPage /> */}
+            </button>
+            <EditProfileForm />
           </div>
         </div>
+        {isorders
+          ? isorders.map((product, index) => (
+              <div key={index} className="flex-col flex-wrap justify-center items-center">
+                <div
+                  className="border m-auto border-gray-300 rounded-lg p-6 mt-[20px] shadow-lg max-w-3xl"
+                >
+                  <h2 className="text-2xl font-semibold mb-4">
+                    {product.productname}
+                  </h2>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Size:</strong> {product.size}
+                  </p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Color:</strong> {product.color}
+                  </p>
+                  <p className="text-lg font-bold text-gray-800 mb-4">
+                    Rs. {product.price}
+                  </p>
+                  <p className="text-gray-700">{product.description}</p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Order Date:</strong> {product.orderdate}
+                  </p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Total Amount:</strong> Rs.{product.totalamount}
+                  </p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Status:</strong> {product.status}
+                  </p>
+                </div>
+              </div>
+            ))
+          : null}
       </section>
     </>
   );

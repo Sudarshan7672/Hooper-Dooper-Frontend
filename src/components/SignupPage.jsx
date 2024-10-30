@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 export default function SignupPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
   const handleSubmit = (e) => {
@@ -66,7 +67,7 @@ export default function SignupPage() {
         </div>
       )}
       {/* main div */}
-      <div className="w-full sm:w-[70vw] m-auto py-20 px-8 flex flex-col lg:pt-[150px] lg:flex-row justify-center">
+      <div className="w-full sm:w-[70vw] m-auto py-20 px-8 flex flex-col lg:pt-[100px] lg:flex-row justify-center">
         {/* first half div  */}
         <div className="w-full lg:w-[50%] m-auto flex flex-col justify-center">
           <div className="w-full mt-[20px] flex justify-center">
@@ -118,6 +119,19 @@ export default function SignupPage() {
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
+                  }}
+                  className="w-full p-2 my-3 rounded-md border-2 mt-1"
+                  placeholder="Enter Your Contact"
+                />
+              </div>
+              <div className="mt-[20px]">
+                <p>Contact Number</p>
+                <input
+                  type="number"
+                  required
+                  value={number}
+                  onChange={(e) => {
+                    setNumber(e.target.value);
                   }}
                   className="w-full p-2 my-3 rounded-md border-2 mt-1"
                   placeholder="Enter Your Email"

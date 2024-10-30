@@ -17,6 +17,7 @@ import Profile from "./components/Profile.jsx";
 import AddressPage from "./components/AddressPage.jsx";
 import FAQ from "./components/FAQ.jsx";
 import Cart from "./components/Cart.jsx";
+import Tickets from "./components/Tickets.jsx";
 import OurVideo from "./components/OurVideo.jsx";
 
 import ResetPassword from "./ResetPassword.jsx";
@@ -52,6 +53,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="/help" element={<Tickets />} />
       </Routes>
       <Footer />
     </Router>

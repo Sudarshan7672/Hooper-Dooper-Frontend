@@ -50,6 +50,7 @@ const Footer = () => {
             <Link to="/our-story">Our Story</Link>
             {/* <Link to="/">Testimonials</Link> */}
             <Link to="/FAQ">FAQ</Link>
+            <Link to="/help">Help</Link>
           </div>
         </div>
         <div className="">

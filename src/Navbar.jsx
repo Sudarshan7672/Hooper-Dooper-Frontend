@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [isLoggedin, setIsLoggedin] = useState(false);
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(false);
     axios
       .get("https://api.hooperdooper.in/isAuthenticated", {
         withCredentials: true,
@@ -43,9 +43,25 @@ const Navbar = () => {
 
   return (
     <div className="flex absolute z-10  w-full flex-row justify-between py-4 px-8 ">
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row z-40 gap-2">
         <div className="flex lg:hidden md:hidden ">
           <Hamburger toggled={isOpen} toggle={handleClick} />
+          {isOpen && (
+        <div className="lg:hidden absolute mt-[-30px] h-[100vh] left-0 w-full bg-gray-900 bg-transparent/90 p-4 space-y-4 text-center text-white rounded-b-md shadow-lg z-40">
+          <Link onClick={() => setOpen(false)} to="/" className="block mt-[50px] hover:bg-gray-600 text-3xl rounded">
+            Home
+          </Link>
+          <Link onClick={() => setOpen(false)} to="/products" className="block py-2 hover:bg-gray-600 text-3xl rounded">
+            Our Products
+          </Link>
+          <Link onClick={() => setOpen(false)} to="/our-story" className="block py-2 hover:bg-gray-600 text-3xl rounded">
+            Our Story
+          </Link>
+          <Link onClick={() => setOpen(false)} to="/help" className="block py-2 hover:bg-gray-600 text-3xl rounded">
+            Help
+          </Link>
+        </div>
+      )}
         </div>
         <a href="/" className="logo">
           <img
@@ -77,6 +93,12 @@ const Navbar = () => {
           to="our-story"
         >
           Our Story
+        </Link>
+        <Link
+          className="hidden lg:flex md:flex hover:text-zinc-100 transition-all duration-300 ease-in-out"
+          to="/help"
+        >
+          Help
         </Link>
         <div className=" flex gap-6 items-center">
           <Link to="/user/cart">

@@ -1,5 +1,5 @@
 import tick from "./assets/tick.webp";
-import cyclehome from "./assets/cycle.webp";
+import cyclehome from "./assets/cycle1.webp";
 import { Link } from "react-router-dom";
 // import productvideo from './assets/'
 

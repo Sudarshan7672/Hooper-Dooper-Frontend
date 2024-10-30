@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
+
+
+const productdetails = {
+  img:"../../src/assets/cycle.webp",
+  title: "Balance Bike",
+  color: "Red",
+  price: "2,499",
+  description:
+    "A balance bike is a two-wheeled pedal-less bike that teaches toddlers as young as 18-months to balance on two wheels. A child’s physical ability such as balance, steering, and coordination are acquired faster on the balance bike than on a bike equipped with training wheels and pedal. Learning to ride a bicycle is one of life’s milestones and the first step to gaining true independence.",
+};
+
+
 export default function OurProductHomepage() {
   const [isAdded, setIsAdded] = useState(false);
   useEffect(() => {
@@ -95,7 +107,7 @@ export default function OurProductHomepage() {
         <div className="w-full lg:w-[30%] mt-10 lg:mt-0 m-auto overflow-hidden border border-gray-600 rounded-lg">
           <div>
             <img
-              src={cycle}
+              src={productdetails.img}
               className="mt-[5px] scale-90"
               loading="lazy"
               alt="cycle"
@@ -103,7 +115,7 @@ export default function OurProductHomepage() {
           </div>
           <div className="w-[90%] m-auto">
             <div>
-              <p className="font-bold text-2xl lg:text-4xl">Balance Bike</p>
+              <p className="font-bold text-2xl lg:text-4xl">{productdetails.title}</p>
             </div>
             <div className="border-2 border-red-500 rounded-2xl mt-3 w-[70px] h-[30px] flex items-center justify-center">
               <img
@@ -111,11 +123,11 @@ export default function OurProductHomepage() {
                 className="inline-block w-[8px] h-[8px] mr-2"
                 alt="red ellipse"
               />
-              <p className="font-bold text-red-600">Red</p>
+              <p className="font-bold text-red-600">{productdetails.color}</p>
             </div>
             <div className="mt-4 flex justify-center lg:justify-start">
               <p className="inline-block font-bold text-xl lg:text-3xl">
-                Rs. 2,499/-
+                Rs. {productdetails.price}/-
               </p>
               <p className="border-2 hidden border-red-500 rounded-lg w-[80px] h-[30px] ml-3 flex items-center justify-center text-red-500 font-bold text-sm">
                 35% Off
@@ -129,6 +141,7 @@ export default function OurProductHomepage() {
                 loading="lazy"
                 alt="cycle vector"
               />
+              <p>{productdetails.description}</p>
             </div>
             <div>
               <button
