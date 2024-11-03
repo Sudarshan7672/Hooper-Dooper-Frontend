@@ -47,21 +47,37 @@ const Navbar = () => {
         <div className="flex lg:hidden md:hidden ">
           <Hamburger toggled={isOpen} toggle={handleClick} />
           {isOpen && (
-        <div className="lg:hidden absolute mt-[-30px] h-[100vh] left-0 w-full bg-gray-900 bg-transparent/90 p-4 space-y-4 text-center text-white rounded-b-md shadow-lg z-40">
-          <Link onClick={() => setOpen(false)} to="/" className="block mt-[50px] hover:bg-gray-600 text-3xl rounded">
-            Home
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/products" className="block py-2 hover:bg-gray-600 text-3xl rounded">
-            Our Products
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/our-story" className="block py-2 hover:bg-gray-600 text-3xl rounded">
-            Our Story
-          </Link>
-          <Link onClick={() => setOpen(false)} to="/help" className="block py-2 hover:bg-gray-600 text-3xl rounded">
-            Help
-          </Link>
-        </div>
-      )}
+            <div className="lg:hidden absolute mt-[-30px] h-[100vh] left-0 w-full bg-gray-900 bg-transparent/90 p-4 space-y-4 text-center text-white rounded-b-md shadow-lg z-40">
+              <Link
+                onClick={() => setOpen(false)}
+                to="/"
+                className="block mt-[50px] hover:bg-gray-600 text-3xl rounded"
+              >
+                Home
+              </Link>
+              <Link
+                onClick={() => setOpen(false)}
+                to="/products"
+                className="block py-2 hover:bg-gray-600 text-3xl rounded"
+              >
+                Our Products
+              </Link>
+              <Link
+                onClick={() => setOpen(false)}
+                to="/our-story"
+                className="block py-2 hover:bg-gray-600 text-3xl rounded"
+              >
+                Our Story
+              </Link>
+              <Link
+                onClick={() => setOpen(false)}
+                to="/help"
+                className="block py-2 hover:bg-gray-600 text-3xl rounded"
+              >
+                Help
+              </Link>
+            </div>
+          )}
         </div>
         <a href="/" className="logo">
           <img

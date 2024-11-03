@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import AddressPage from "./AddressPage";
 import { useState, useEffect } from "react";
 import EditProfileForm from "./EditProfileFrom";
@@ -6,30 +5,37 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
 
-const isorders = [
-  {
-    productname: "Self Balancing Cycle - Red",
-    size: "2m*1.5m",
-    color: "Red",
-    price: 2499,
-    description:
-      "A balance bike is a two-wheeled pedal-less bike that teaches toddlers as young as 18-months to balance on two wheels. A child’s physical ability such as balance, steering, and coordination are acquired faster on the balance bike than on a bike equipped with training wheels and pedal. Learning to ride a bicycle is one of life’s milestones and the first step to gaining true independence. Balance Bike gives true independence along with a huge boost in confidence.",
-      orderdate: "2021-09-01",
-      totalamount: 2499,
-      status: "Delivered",
-  },
-  {
-    productname: "Self Balancing Cycle - Red",
-    size: "2m*1.5m",
-    color: "Red",
-    price: 2499,
-    description:
-      "A balance bike is a two-wheeled pedal-less bike that teaches toddlers as young as 18-months to balance on two wheels. A child’s physical ability such as balance, steering, and coordination are acquired faster on the balance bike than on a bike equipped with training wheels and pedal. Learning to ride a bicycle is one of life’s milestones and the first step to gaining true independence. Balance Bike gives true independence along with a huge boost in confidence.",
-      orderdate: "2021-09-01",
-  },
-]
+// const orders = [
+//   {
+//     orderItems: [
+//       {
+//         product: {
+//           title: "Self Balancing Cycle - Red",
+//           size: "2m*1.5m",
+//           color: "Red",
+//           price: 2499,
+//         },
+//         quantity: 1,
+//       },
+//       {
+//         product: {
+//           title: "Self Balancing Cycle - Red",
+//           size: "2m*1.5m",
+//           color: "Red",
+//           price: 2499,
+//         },
+//         quantity: 1,
+//       },
+//     ],
+//     orderdate: "2021-09-01",
+//     totalamount: 2499,
+//     status: "Delivered",
+//   },
+// ];
 
 export default function Profile() {
+  const [showOrders, setShowOrders] = useState(false);
+  const [orders, setOrders] = useState([]);
   const [result, setResult] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setError] = useState(null);
@@ -74,16 +80,40 @@ export default function Profile() {
         }
         setIsLoading(false);
         error.response.data.message && setError(error.response.data.message);
+        ii;
         enablePageScroll();
         // console.log(error);
       });
   }, []);
+
+  const fetchOrdersData = async () => {
+    axios
+      .get("https://api.hooperdooper.in/orders", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response?.data?.data);
+        setOrders(response?.data?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     if (isError) {
       toast.error(isError);
     }
   }, [isError]);
+
+  const toggleShowOrders = async () => {
+    if (!showOrders) {
+      await fetchOrdersData();
+      setShowOrders(true);
+    } else {
+      setShowOrders(false);
+    }
+  };
   return (
     <>
       {isLoading && (
@@ -147,51 +177,65 @@ export default function Profile() {
             </button>
           </div>
           <div className="flex max-sm:flex-wrap max-sm:justify-center items-center gap-3">
-            <button>
+            <button onClick={toggleShowOrders}>
               <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
                 My Orders
               </a>
             </button>
             <button>
-            <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
-              Verify Email
-            </a>
+              <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
+                Verify Email
+              </a>
             </button>
             <EditProfileForm />
           </div>
         </div>
-        {isorders
-          ? isorders.map((product, index) => (
-              <div key={index} className="flex-col flex-wrap justify-center items-center">
-                <div
-                  className="border m-auto border-gray-300 rounded-lg p-6 mt-[20px] shadow-lg max-w-3xl"
-                >
-                  <h2 className="text-2xl font-semibold mb-4">
-                    {product.productname}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>Size:</strong> {product.size}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>Color:</strong> {product.color}
-                  </p>
-                  <p className="text-lg font-bold text-gray-800 mb-4">
-                    Rs. {product.price}
-                  </p>
-                  <p className="text-gray-700">{product.description}</p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>Order Date:</strong> {product.orderdate}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>Total Amount:</strong> Rs.{product.totalamount}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>Status:</strong> {product.status}
-                  </p>
+        {showOrders &&
+          orders.length > 0 &&
+          orders.map((order, index) => (
+            <div
+              key={index}
+              className="flex-col  flex-wrap justify-center items-center"
+            >
+              <div className="border m-auto border-gray-300 rounded-lg p-6 mt-[20px] shadow-lg max-w-3xl">
+                <p>
+                  <strong>Order ID:</strong> {order.orderId}
+                </p>
+                <h6>
+                  <strong>Products:</strong>
+                </h6>
+                <div className="">
+                  {order.orderItems.map((item, idx) => {
+                    return item.products.map((product, index) => {
+                      return (
+                        <div key={idx} className="px-2 py-4 mb-1  border-b-2">
+                          <h2 className="text-2xl font-semibold mb-4">
+                            {product?.title}
+                          </h2>
+                          <p className="text-sm text-gray-600 mb-2">
+                            <strong>Color:</strong> {product?.color}
+                          </p>
+                          <p className="text-lg font-bold text-gray-800 ">
+                            Rs. {product?.price}
+                          </p>
+                        </div>
+                      );
+                    });
+                  })}
                 </div>
+                <p className="text-sm text-gray-600 mb-2">
+                  <strong>Order Date:</strong>{" "}
+                  {new Date(order?.dateOrdered).toLocaleDateString()}
+                </p>
+                <p className="text-sm text-gray-600 mb-2">
+                  <strong>Total Amount:</strong> Rs.{order?.totalPrice}
+                </p>
+                <p className="text-sm text-gray-600 mb-2">
+                  <strong>Status:</strong> {order?.status}
+                </p>
               </div>
-            ))
-          : null}
+            </div>
+          ))}
       </section>
     </>
   );
