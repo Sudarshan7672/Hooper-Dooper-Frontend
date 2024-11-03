@@ -105,28 +105,37 @@ export default function Tickets() {
               className="block w-[95%] lg:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="category *"
             >
-              <option value={General} className="font-semibold text-slate-900">
+              <option
+                value={"General"}
+                className="font-semibold text-slate-900"
+              >
                 General
               </option>
               <option
-                value={Complaint}
+                value={"Complaint"}
                 className="font-semibold text-slate-900"
               >
                 Complaint
               </option>
-              <option value={Order} className="font-semibold text-slate-900">
+              <option value={"Order"} className="font-semibold text-slate-900">
                 Order
               </option>
-              <option value={Return} className="font-semibold text-slate-900">
+              <option value={"Return"} className="font-semibold text-slate-900">
                 Return
               </option>
-              <option value={Refund} className="font-semibold text-slate-900">
+              <option value={"Refund"} className="font-semibold text-slate-900">
                 refund
               </option>
-              <option value={Product} className="font-semibold text-slate-900">
+              <option
+                value={"Product"}
+                className="font-semibold text-slate-900"
+              >
                 Product
               </option>
-              <option value={Payment} className="font-semibold text-slate-900">
+              <option
+                value={"Payment"}
+                className="font-semibold text-slate-900"
+              >
                 Payment
               </option>
             </select>
