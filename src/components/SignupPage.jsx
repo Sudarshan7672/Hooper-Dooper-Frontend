@@ -22,6 +22,7 @@ export default function SignupPage() {
           fullName,
           email,
           password: password,
+          phone: number,
         },
         {
           withCredentials: true,
