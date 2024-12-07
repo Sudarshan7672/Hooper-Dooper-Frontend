@@ -39,6 +39,35 @@ export default function Profile() {
   const [result, setResult] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setError] = useState(null);
+
+  const VerifyMailHandler = () => {
+    setIsLoading(true);
+    disablePageScroll();
+    axios
+      .get("https://api.hooperdooper.in/auth/send-verification-email", {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response?.data);
+        setIsLoading(false);
+        enablePageScroll();
+        toast.success(response?.data?.message);
+      })
+      .catch((error) => {
+        if (error.response.status === 401) {
+          window.location.href = "/login";
+        }
+        setIsLoading(false);
+        error.response.data.message && setError(error.response.data.message);
+        ii;
+        enablePageScroll();
+        // console.log(error);
+      });
+  }
+
   const logooutHandler = () => {
     axios
       .get("https://api.hooperdooper.in/auth/v1/logout", {
@@ -182,7 +211,7 @@ export default function Profile() {
                 My Orders
               </a>
             </button>
-            <button>
+            <button onClick={VerifyMailHandler}>
               <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
                 Verify Email
               </a>
