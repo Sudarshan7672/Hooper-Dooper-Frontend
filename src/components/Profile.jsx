@@ -211,11 +211,13 @@ export default function Profile() {
                 My Orders
               </a>
             </button>
-            <button onClick={VerifyMailHandler}>
+            {!result?.data?.isVerified &&  <button onClick={VerifyMailHandler}>
               <a className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">
                 Verify Email
               </a>
             </button>
+
+            }
             <EditProfileForm />
           </div>
         </div>
