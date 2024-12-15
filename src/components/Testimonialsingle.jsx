@@ -34,9 +34,6 @@ export default function Testimonialsingle() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center mt-[20px] mb-[20px] font-bold">
-          <p>{testimonial.name}</p>
-        </div>
       </div>
       
       ))}

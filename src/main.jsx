@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import Story from "./Story.jsx";
 import LoginPage from "./components/LoginPage.jsx";
 import SignupPage from "./components/SignupPage.jsx";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from "./components/Profile.jsx";
 import AddressPage from "./components/AddressPage.jsx";
@@ -22,6 +22,7 @@ import OurVideo from "./components/OurVideo.jsx";
 
 import ResetPassword from "./ResetPassword.jsx";
 import ForgotPassword from "./ForgotPassword.jsx";
+import VerifyEmail from "./components/VerifyEmail.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -40,6 +41,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       {/* Same as */}
       <ToastContainer />
       <Routes>
+        <Route path="/verify-email/:token" element={<VerifyEmail/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/" element={<App />} />
