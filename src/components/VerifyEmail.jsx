@@ -7,7 +7,7 @@ const VerifyEmail = () => {
 	const verifyEmail = async () => {
 		try {
 			const res = await axios.get(
-				`http://localhost:5000/auth/verify-email/${token}`
+				`https://api.hooperdooper.in/auth/verify-email/${token}`
 			);
 			if (res.status === 200){
 			toast.success("Email Verified Successfully!");

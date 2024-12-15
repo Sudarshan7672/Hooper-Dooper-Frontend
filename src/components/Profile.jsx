@@ -62,7 +62,6 @@ export default function Profile() {
         }
         setIsLoading(false);
         error.response.data.message && setError(error.response.data.message);
-        ii;
         enablePageScroll();
         // console.log(error);
       });
@@ -109,7 +108,6 @@ export default function Profile() {
         }
         setIsLoading(false);
         error.response.data.message && setError(error.response.data.message);
-        ii;
         enablePageScroll();
         // console.log(error);
       });
