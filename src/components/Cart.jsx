@@ -85,8 +85,8 @@ const Cart = () => {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
-          withCredentials: true,
         },
+        withCredentials: true,
       })
       .then((res) => {
         setProducts(products.filter((product) => product.id !== id));
