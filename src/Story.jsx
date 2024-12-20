@@ -86,7 +86,7 @@ const Story = () => {
               </p>
             </div>
 
-            <img src={storyImage2} alt="Bicycle-Image-1" />
+            <img src={storyImage3} alt="Bicycle-Image-1" />
           </div>
           <div className="flex mt-24 flex-col lg:flex-row  lg:space-x-32">
             <img src={storyImage3} alt="Bicycle-Image-1" />

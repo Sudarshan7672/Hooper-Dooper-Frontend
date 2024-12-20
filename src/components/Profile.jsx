@@ -155,11 +155,11 @@ export default function Profile() {
         </div>
       )}
       <section className="relative pt-40 pb-24">
-        <img
+        {/* <img
           src="https://pagedone.io/asset/uploads/1705473908.webp"
           alt="cover-image"
           className="w-full absolute top-0 left-0 z-0 h-60 object-cover"
-        />
+        /> */}
         <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
           <div className="flex items-center justify-center sm:justify-start relative z-10 mb-5">
             <img
@@ -191,7 +191,7 @@ export default function Profile() {
               <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">
                 Engineer at BB Agency Industry{" "}
                 <br className="hidden sm:block" />
-                New York, United States
+                New York, United Stat
               </p>
             </div>
             <button
