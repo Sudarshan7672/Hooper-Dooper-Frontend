@@ -22,9 +22,9 @@ const VerifyEmail = () => {
 			toast.error(error.response.data);
 		}
 	};
-	return <div className="w-full h-full flex justify-center items-center">
-		<button className="px-20 py-5 bg-blue-500 " onClick={verifyEmail}>Verify Email</button>
-	</div>;
+	return <div className="w-screen h-[50vh] flex justify-center items-center">
+		<button className="px-12 py-3 bg-blue-500 font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-all ease-in-out duration-300" onClick={verifyEmail}>Verify Email</button>
+	</div>
 };
 
 export default VerifyEmail;
