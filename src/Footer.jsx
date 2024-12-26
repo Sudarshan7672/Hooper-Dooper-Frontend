@@ -46,10 +46,14 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold mb-4">Quick Links</h1>
           <div className="flex flex-col gap-2">
             <Link to="/">Home</Link>
-            <Link to="/products">Our Products</Link>
-            <Link to="/our-story">Our Story</Link>
+            {/* <Link to="/products">Our Products</Link> */}
+            {/* <Link to="/our-story">Our Story</Link> */}
             {/* <Link to="/">Testimonials</Link> */}
             <Link to="/FAQ">FAQ</Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/return-policy">Return Policy</Link>
+            <Link to="/shipping-policy">Shipping Policy</Link>
             <Link to="/help">Help</Link>
           </div>
         </div>
