@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import HooperDooperLogo from "../assets/HooperDooperLogo.svg";
 import { toast } from "react-toastify";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { BASE_URL } from "../config/constants";
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ export default function LoginPage() {
     disablePageScroll();
     axios
       .post(
-        "https://api.hooperdooper.in/auth/v2/login",
+        `${BASE_URL}/auth/v2/login`,
         {
           username: email.split("@")[0],
           password: password,
@@ -43,7 +44,7 @@ export default function LoginPage() {
   };
 
   const googleAuthHandler = () => {
-    window.open("https://api.hooperdooper.in/auth/google", "_self");
+    window.open(`${BASE_URL}/auth/google`, "_self");
   };
 
   useEffect(() => {

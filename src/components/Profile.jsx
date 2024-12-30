@@ -4,7 +4,7 @@ import EditProfileForm from "./EditProfileFrom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
-
+import { BASE_URL } from "../config/constants";
 // const orders = [
 //   {
 //     orderItems: [
@@ -44,7 +44,7 @@ export default function Profile() {
     setIsLoading(true);
     disablePageScroll();
     axios
-      .get("https://api.hooperdooper.in/auth/send-verification-email", {
+      .get(`${BASE_URL}/auth/send-verification-email`, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export default function Profile() {
 
   const logooutHandler = () => {
     axios
-      .get("https://api.hooperdooper.in/auth/v1/logout", {
+      .get(`${BASE_URL}/auth/v1/logout`, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default function Profile() {
     setIsLoading(true);
     disablePageScroll();
     axios
-      .get("https://api.hooperdooper.in/profile", {
+      .get(`${BASE_URL}/profile`, {
         withCredentials: true,
         credentials: "include",
         headers: {
@@ -115,7 +115,7 @@ export default function Profile() {
 
   const fetchOrdersData = async () => {
     axios
-      .get("https://api.hooperdooper.in/orders", {
+      .get(`${BASE_URL}/orders `, {
         withCredentials: true,
       })
       .then((response) => {

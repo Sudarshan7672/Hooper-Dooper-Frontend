@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import React from "react";
+import { BASE_URL } from "./config/constants";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
@@ -20,7 +22,7 @@ const ResetPassword = () => {
     disablePageScroll();
     axios
       .post(
-        `https://api.hooperdooper.in/auth/reset-password`,
+        `${BASE_URL}/auth/reset-password`,
         {
           resetToken: resetToken,
           password: password,

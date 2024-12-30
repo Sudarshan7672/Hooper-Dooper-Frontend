@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { BASE_URL } from "./config/constants";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ const ForgotPassword = () => {
     disablePageScroll();
     axios
       .post(
-        `https://api.hooperdooper.in/auth/forgot-password`,
+        `${BASE_URL}/auth/forgot-password`,
         {
           email: email,
         },

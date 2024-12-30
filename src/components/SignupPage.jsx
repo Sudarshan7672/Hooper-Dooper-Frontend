@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import React from "react";
+import { BASE_URL } from "../config/constants";
 export default function SignupPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ export default function SignupPage() {
     setLoading(true);
     axios
       .post(
-        "https://api.hooperdooper.in/auth/v1/register",
+        `${BASE_URL}/auth/v1/register`,
         {
           fullName,
           email,
@@ -49,7 +51,7 @@ export default function SignupPage() {
   };
 
   const googleAuthHandler = () => {
-    window.open("https://api.hooperdooper.in/auth/google", "_self");
+    window.open(`${BASE_URL}/auth/google`, "_self");
   };
   useEffect(() => {
     window.scrollTo(0, 0);

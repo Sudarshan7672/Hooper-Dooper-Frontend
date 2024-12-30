@@ -6,6 +6,7 @@ import storyImage4 from "./assets/story-image-4.webp";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "./config/constants";
 const Story = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,7 +26,7 @@ const Story = () => {
     setIsLoading(true);
     axios
       .post(
-        "https://api.hooperdooper.in/cart/add",
+        `${BASE_URL}/cart/add`,
         {
           product: slug,
           quantity: 1,

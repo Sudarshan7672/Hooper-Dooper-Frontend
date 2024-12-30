@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import HooperDooperLogo from "./assets/HooperDooperLogo.svg";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { BASE_URL } from "./config/constants";
 
 const Navbar = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
   useEffect(() => {
     setIsLoading(false);
     axios
-      .get("https://api.hooperdooper.in/isAuthenticated", {
+      .get(`${BASE_URL}/isAuthenticated`, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

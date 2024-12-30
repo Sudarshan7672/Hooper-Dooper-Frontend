@@ -1,13 +1,15 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import React from "react";
+import { BASE_URL } from "../config/constants";
 
 const VerifyEmail = () => {
 	const { token } = useParams();
 	const verifyEmail = async () => {
 		try {
 			const res = await axios.get(
-				`https://api.hooperdooper.in/auth/verify-email/${token}`
+				`${BASE_URL}/auth/verify-email/${token}`
 			);
 			if (res.status === 200){
 			toast.success("Email Verified Successfully!");

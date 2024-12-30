@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
+import React from "react";
+import { BASE_URL } from "../config/constants";
 
 
 const productdetails = {
@@ -33,7 +35,7 @@ export default function OurProductHomepage() {
     setIsLoading(true);
     axios
       .post(
-        "https://api.hooperdooper.in/cart/add",
+        `${BASE_URL}/cart/add`,
         {
           product: slug,
           quantity: 1,
