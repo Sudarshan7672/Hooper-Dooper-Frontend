@@ -23,6 +23,12 @@ import OurVideo from "./components/OurVideo.jsx";
 import ResetPassword from "./ResetPassword.jsx";
 import ForgotPassword from "./ForgotPassword.jsx";
 import VerifyEmail from "./components/VerifyEmail.jsx";
+import TermsAndConditions from "../src/TermsAndConditions.jsx";
+import ReturnPolicy from "../src/ReturnPolicy.jsx";
+import PrivacyPolicy from "../src/PrivacyPolicy.jsx";
+import ShippingPolicy from "./ShippingPolicy .jsx";
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -56,6 +62,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="*" element={<h1>Not Found</h1>} />
         <Route path="/help" element={<Tickets />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/shipping-policy" element={<ShippingPolicy />} />
       </Routes>
       <Footer />
     </Router>
